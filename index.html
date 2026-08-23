@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pl" data-style="minimalist" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    
+    <!-- Podstawowe metatagi SEO -->
+    <title>Tymofii Pryimak - Chrześcijańskie ubrania z przesłaniem</title>
+    <meta name="description" content="Poznaj projekty Tymofii Pryimaka. Unikalne, chrześcijańskie ubrania tworzone z pasją. Zobacz portfolio bluz z ewangelicznym przesłaniem i nadrukiem DTF.">
+    <meta name="author" content="Tymofii Pryimak">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <meta name="theme-color" content="#18191c">
+    
+    <!-- Link kanoniczny -->
+    <link rel="canonical" href="https://tim-1235.github.io/">
+
+    <!-- Open Graph (Facebook / LinkedIn) -->
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tymofii Pryimak - Chrześcijańskie ubrania z przesłaniem">
+    <meta property="og:description" content="Poznaj projekty Tymofii Pryimaka. Unikalne, chrześcijańskie ubrania tworzone z pasją. Zobacz portfolio bluz z ewangelicznym przesłaniem i nadrukiem DTF.">
+    <meta property="og:url" content="https://tim-1235.github.io/">
+    <meta property="og:site_name" content="Tymofii Pryimak Portfolio">
+    <meta property="og:image" content="https://raw.githubusercontent.com/tim-1235/photos/main/20250122_183302.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Tymofii Pryimak - Chrześcijańskie ubrania z przesłaniem">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tymofii Pryimak - Chrześcijańskie ubrania z przesłaniem">
+    <meta name="twitter:description" content="Poznaj projekty Tymofii Pryimaka. Unikalne, chrześcijańskie ubrania tworzone z pasją. Zobacz portfolio bluz z ewangelicznym przesłaniem i nadrukiem DTF.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/tim-1235/photos/main/20250122_183302.jpg">
+
+    <!-- Google Analytics (GA4) -->
+    <!-- PODMIEŃ 'G-MEASUREMENT_ID' NA TWÓJ WŁASNY IDENTYFIKATOR STRUMIENIA DANYCH GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CTD3Z70F6P"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CTD3Z70F6P');
+    </script>
+
+    <!-- Ustrukturyzowane Dane (JSON-LD Schema) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://tim-1235.github.io/#website",
+          "url": "https://tim-1235.github.io/",
+          "name": "Tymofii Pryimak - Chrześcijańskie ubrania z przesłaniem",
+          "description": "Unikalne chrześcijańskie ubrania tworzone z pasją. Portfolio bluz i koszulek z ewangelicznym przesłaniem.",
+          "inLanguage": ["pl", "en"]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://tim-1235.github.io/#person",
+          "name": "Tymofii Pryimak",
+          "jobTitle": "Projektant odzieży / Designer",
+          "email": "tymofii.pryimak@gmail.com",
+          "telephone": "+48579540739",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Zielona Góra",
+            "addressCountry": "PL"
+          },
+          "url": "https://tim-1235.github.io/",
+          "image": "https://raw.githubusercontent.com/tim-1235/photos/main/20250122_183302.jpg"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Wstępne ładowanie czcionek i tła -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=2000&auto=format&fit=crop">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <!-- Wyodrębnione Style CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Wyodrębniona Logika JS -->
+    <script src="./js/main.js" defer></script>
+</head>
+
+<body>
+
+    <nav class="top-nav">
+        <div class="nav-links">
+            <a href="#o-mnie" data-i18n="nav-about">O mnie</a>
+            <a href="#portfolio" data-i18n="nav-portfolio">Portfolio</a>
+            <a href="#dostepne-nadruki" data-i18n="nav-prints">Nadruki</a>
+            <a href="#kontakt" data-i18n="nav-contact">Kontakt</a>
+        </div>
+        <div class="nav-actions">
+            <div class="style-switcher">
+                <button id="styleSwitcherToggle" class="style-switcher-btn" aria-label="Zmień styl" data-i18n-aria="aria-changestyle">
+                    <span>🎨</span> <span class="switcher-text" data-i18n="style-text">Styl</span>
+                </button>
+                <div id="styleSwitcherMenu" class="style-switcher-menu">
+                    <button class="style-btn" data-set-style="minimalist">🌑 Minimal.</button>
+                    <button class="style-btn" data-set-style="drawing" data-i18n="style-drawing">✏️ Rysunkowy</button>
+                    <button class="style-btn" data-set-style="neon">⚡ Neon</button>
+                    <button class="style-btn" data-set-style="retro">📻 Retro</button>
+                </div>
+            </div>
+            <button id="themeToggle" aria-label="Przełącz tryb jasny/ciemny">☀️ Jasny</button>
+        </div>
+        <button id="langToggle" aria-label="Change language / Zmień język">🇵🇱 PL</button>
+    </nav>
+
+    <header id="top">
+        <!-- TŁA DLA DUŻYCH EKRANÓW (CLOUD) -->
+        <svg class="cloud-decor cloud-1 floating-cloud parallax-el" viewBox="0 0 100 60">
+            <path d="M 20 40 Q 10 40 10 30 Q 10 20 25 20 Q 30 5 50 10 Q 65 -5 80 15 Q 95 15 95 30 Q 95 40 85 40 Z" />
+        </svg>
+        <svg class="cloud-decor cloud-2 floating-cloud parallax-el" viewBox="0 0 100 60">
+            <path d="M 20 40 Q 10 40 10 30 Q 10 20 25 20 Q 30 5 50 10 Q 65 -5 80 15 Q 95 15 95 30 Q 95 40 85 40 Z" />
+        </svg>
+        <svg class="cloud-decor sun-decor parallax-el" viewBox="0 0 100 100">
+            <g class="spin-inner">
+                <circle cx="50" cy="50" r="25" />
+                <path
+                    d="M 50 10 L 50 0 M 50 90 L 50 100 M 10 50 L 0 50 M 90 50 L 100 50 M 22 22 L 15 15 M 78 78 L 85 85 M 22 78 L 15 85 M 78 22 L 85 15"
+                    stroke="currentColor" stroke-width="6" stroke-linecap="round" />
+            </g>
+        </svg>
+        <svg class="cloud-decor moon-decor parallax-el" viewBox="0 0 100 100">
+            <g class="moon-inner">
+                <path d="M 60 10 A 40 40 0 1 0 90 60 A 45 45 0 0 1 60 10 Z" />
+            </g>
+        </svg>
+
+        <!-- TŁA DLA DUŻYCH EKRANÓW (DRAWING) -->
+        <svg class="doodle doodle-bg-sun parallax-el" viewBox="0 0 100 100" fill="none" stroke="currentColor"
+            stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+            <g class="spin-inner">
+                <circle cx="50" cy="50" r="22" stroke-dasharray="4 4" />
+                <path
+                    d="M50 15 L50 5 M50 85 L50 95 M15 50 L5 50 M85 50 L95 50 M25 25 L15 15 M75 75 L85 85 M25 75 L15 85 M75 25 L85 15" />
+            </g>
+        </svg>
+        <svg class="doodle doodle-bg-moon parallax-el" viewBox="0 0 100 100" fill="none" stroke="currentColor"
+            stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+            <g class="wobble-inner">
+                <path d="M 60 15 A 35 35 0 1 0 85 60 A 40 40 0 0 1 60 15 Z" fill="currentColor" fill-opacity="0.2" />
+                <circle cx="35" cy="45" r="4" fill="currentColor" />
+                <circle cx="50" cy="30" r="2" fill="currentColor" />
+            </g>
+        </svg>
+        <svg class="doodle doodle-bg-cloud doodle-bg-cloud-1 parallax-el" viewBox="0 0 100 60" fill="none"
+            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M 20 45 Q 10 45 10 35 Q 10 20 25 20 Q 35 5 55 10 Q 70 -5 85 15 Q 95 20 95 35 Q 95 45 80 45 Z"
+                fill="currentColor" fill-opacity="0.1" />
+        </svg>
+        <svg class="doodle doodle-bg-cloud doodle-bg-cloud-2 parallax-el" viewBox="0 0 100 60" fill="none"
+            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M 20 45 Q 10 45 10 35 Q 10 20 25 20 Q 35 5 55 10 Q 70 -5 85 15 Q 95 20 95 35 Q 95 45 80 45 Z"
+                fill="currentColor" fill-opacity="0.1" />
+        </svg>
+        <svg class="doodle doodle-bg-cloud doodle-bg-cloud-3 parallax-el" viewBox="0 0 100 60" fill="none"
+            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M 20 45 Q 10 45 10 35 Q 10 20 25 20 Q 35 5 55 10 Q 70 -5 85 15 Q 95 20 95 35 Q 95 45 80 45 Z"
+                fill="currentColor" fill-opacity="0.1" />
+        </svg>
+
+        <div class="header-content scroll-anim">
+            <!-- DETALE (DRAWING) -->
+            <svg class="doodle doodle-sparkle-1 floating-doodle parallax-el" viewBox="0 0 50 50" fill="none"
+                stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M25 5 Q25 25 45 25 Q25 25 25 45 Q25 25 5 25 Q25 25 25 5" fill="currentColor" />
+            </svg>
+            <svg class="doodle doodle-sparkle-2 floating-doodle parallax-el" viewBox="0 0 50 50" fill="none"
+                stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M25 5 Q25 25 45 25 Q25 25 25 45 Q25 25 5 25 Q25 25 25 5" fill="currentColor" />
+            </svg>
+            <svg class="doodle doodle-crown floating-doodle parallax-el" viewBox="0 0 60 50" fill="none"
+                stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 40 L10 20 L20 30 L30 15 L40 30 L50 20 L50 40 Z" />
+            </svg>
+            <svg class="doodle doodle-heart floating-doodle parallax-el" viewBox="0 0 50 50" fill="none"
+                stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M 25 15 C 25 5, 5 5, 5 20 C 5 35, 25 45, 25 45 C 25 45, 45 35, 45 20 C 45 5, 25 5, 25 15 Z" />
+            </svg>
+            <svg class="doodle doodle-fish floating-doodle parallax-el" viewBox="0 0 60 50" fill="none"
+                stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M45 15 C 15 15, 10 35, 45 35 L55 45 L50 25 L55 5 Z" />
+            </svg>
+            <svg class="doodle doodle-swirl floating-doodle parallax-el" viewBox="0 0 50 80" fill="none"
+                stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M25 5 C 45 5, 45 25, 25 25 C 10 25, 10 45, 25 45 C 45 45, 45 65, 25 65" />
+            </svg>
+            <svg class="doodle doodle-scribble floating-doodle parallax-el" viewBox="0 0 100 30" fill="none"
+                stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M 5 15 Q 25 5 50 15 T 95 15" />
+            </svg>
+
+            <h1>Tymofii Pryimak</h1>
+            <p data-i18n="hero-subtitle">Witaj :) na mojej stronie</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="section-wrapper" id="o-mnie">
+            <div class="container">
+                <h2 class="section-title scroll-anim" data-i18n="about-title">O mnie</h2>
+                <div class="about-section">
+
+                    <article class="about-text scroll-anim">
+                        <p data-i18n="about-p1">Cześć! Mam na imię Tymofii i moja przygoda z projektowaniem nie zaczęła się od wielkich
+                            planów biznesowych, ale od zwykłej potrzeby serca i... pustki w szafie.</p>
+                        <p data-i18n="about-p2">Wszystko zaczęło się w 2023 roku. Miałem wtedy 15 lat i po prostu chciałem nosić fajne,
+                            chrześcijańskie koszulki, których nigdzie nie mogłem znaleźć – więc zacząłem robić je sam.
+                        </p>
+                        <p data-i18n="about-p3">Dziś moją misją jest to, żebyś Ty też mógł nosić ubrania, które są solidne, dobrze wyglądają
+                            i niosą konkretny przekaz. Wierzę, że o Ewangelii nie trzeba tylko mówić – można ją też
+                            pokazać tym, co mamy na sobie.</p>
+                        <p data-i18n="about-p4">Aby zapewnić Wam najwyższą jakość, kupuje sprawdzoną odzież marek takich jak 
+                            <strong>Outhorn</strong> oraz <strong>4F</strong>, ale nie ograniczam się tylko do nich. Sam nie zajmuję się drukowaniem – wykonanie nadruków zlecam specjalistom z lokalnej drukarni w 
+                            <strong>Zielonej Górze</strong>, którzy wykorzystują do tego nowoczesną i niezwykle trwałą technologię <strong>DTF</strong>.
+                        </p>
+                        <!-- Disclaimer Legalny -->
+                        <p class="brand-disclaimer" data-i18n="about-disclaimer">
+                            Ważna informacja: Moje projekty są niezależną inicjatywą twórczą. Wykorzystuję odzież powyższych marek jako bazę do własnych modyfikacji. Strona oraz oferowane produkty nie są powiązane, wspierane ani nie stanowią oficjalnej współpracy z firmami Outhorn oraz 4F.
+                        </p>
+                    </article>
+                    
+                    <figure class="about-image scroll-anim">
+                        <!-- Rysunek igły i nitki (widoczny tylko w stylu Rysunkowym) -->
+                        <svg class="doodle" style="top:-30px; left:-30px; width:80px;" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3">
+                            <path d="M80 20 L40 80 M75 27 C85 10 95 15 80 20" />
+                            <path d="M80 20 C60 0 10 30 20 60 C30 90 70 90 60 70" stroke-dasharray="5 5" />
+                        </svg>
+                        <!-- TYLKO JEDNO ZDJĘCIE -->
+                        <img fetchpriority="high" src="https://raw.githubusercontent.com/tim-1235/photos/main/20250122_183302.jpg" alt="Tymofii Pryimak">
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section class="section-wrapper" id="portfolio">
+            <div class="container">
+                <svg class="doodle doodle-arrow floating-doodle parallax-el" viewBox="0 0 100 100" fill="none"
+                    stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 10 Q60 5 80 40 T70 90 M50 75 L70 95 L85 65" />
+                </svg>
+
+                <h2 class="section-title scroll-anim" data-i18n="portfolio-title">Portfolio</h2>
+                <p class="portfolio-desc scroll-anim" data-i18n="portfolio-desc">
+                    Poniższe grafiki i projekty nie są na sprzedaż. Zostały wykonane w ramach użytku osobistego i służą wyłącznie jako pokaz moich umiejętności.
+                </p>
+
+                <!-- KOLEKCJA ZIELONA -->
+                <div class="portfolio-grid">
+                    <div class="portfolio-card scroll-anim">
+                        <img decoding="async" src="https://raw.githubusercontent.com/tim-1235/photos/main/20250817_101405.jpg" alt="Kolekcja zielona 1" data-i18n-alt="alt-green-1">
+                    </div>
+                    <div class="portfolio-card scroll-anim">
+                        <img decoding="async" src="https://raw.githubusercontent.com/tim-1235/photos/main/20250817_101138.jpg" alt="Kolekcja zielona 2" data-i18n-alt="alt-green-2">
+                    </div>
+                    <div class="portfolio-card scroll-anim">
+                        <img decoding="async" src="https://raw.githubusercontent.com/tim-1235/photos/main/20250817_101154.jpg" alt="Kolekcja zielona 3" data-i18n-alt="alt-green-3">
+                    </div>
+                </div>
+
+                <!-- KOLEKCJA FIOLETOWA -->
+                <div class="portfolio-grid">
+                    <div class="portfolio-card scroll-anim">
+                        <img decoding="async" src="https://raw.githubusercontent.com/tim-1235/photos/main/20250817_101730.jpg" alt="Kolekcja fioletowa 1" data-i18n-alt="alt-purple-1">
+                    </div>
+                    <div class="portfolio-card scroll-anim">
+                        <img decoding="async" src="https://raw.githubusercontent.com/tim-1235/photos/main/20250817_101822.jpg" alt="Kolekcja fioletowa 2" data-i18n-alt="alt-purple-2">
+                    </div>
+                    <div class="portfolio-card scroll-anim">
+                        <img decoding="async" src="https://raw.githubusercontent.com/tim-1235/photos/main/20250817_101835.jpg" alt="Kolekcja fioletowa 3" data-i18n-alt="alt-purple-3">
+                    </div>
+                </div>
+
+                <!-- KOLEKCJA NIEBIESKA -->
+                <div class="portfolio-grid">
+                    <div class="portfolio-card scroll-anim">
+                        <img decoding="async" src="https://raw.githubusercontent.com/tim-1235/photos/main/20250817_102133.jpg" alt="Kolekcja niebieska 1" data-i18n-alt="alt-blue-1">
+                    </div>
+                    <div class="portfolio-card scroll-anim">
+                        <img decoding="async" src="https://raw.githubusercontent.com/tim-1235/photos/main/20250817_102214.jpg" alt="Kolekcja niebieska 2" data-i18n-alt="alt-blue-2">
+                        <a href="https://www.magnific.com" target="_blank" rel="noopener noreferrer" class="freepik-attr" data-i18n="attr-sun">Słońce: Magnific</a>
+                    </div>
+                    <div class="portfolio-card scroll-anim">
+                        <img decoding="async" src="https://raw.githubusercontent.com/tim-1235/photos/main/20250823_154747.jpg" alt="Kolekcja niebieska 3" data-i18n-alt="alt-blue-3">
+                        <a href="https://www.magnific.com" target="_blank" rel="noopener noreferrer" class="freepik-attr" data-i18n="attr-sun">Słońce: Magnific</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section class="section-wrapper" id="dostepne-nadruki">
+            <div class="container">
+                <h2 class="section-title scroll-anim" data-i18n="prints-title">Dostępne nadruki</h2>
+                
+                <p class="portfolio-desc scroll-anim" data-i18n="prints-desc">
+                    Poniżej znajdują się dostępne nadruki, które można zamówić na koszulkę lub bluzę.<br> Tworzę też grafikę na zamówienie.
+                    <br><br>
+                    <strong>Baza moich projektów stale rośnie i z czasem będą pojawiać się tutaj nowe wzory – zachęcam do regularnego zaglądania!</strong>
+                </p>
+
+                <!-- KOLEKCJA GRAFFITI -->
+                <h3 class="scroll-anim" style="text-align: center; margin: 40px 0 30px; font-size: 1.8rem; opacity: 0.9; font-weight: bold; text-transform: uppercase;" data-i18n="prints-graffiti-title">
+                    Kolekcja Graffiti
+                </h3>
+                
+                <div class="portfolio-grid">
+                    <div class="portfolio-card scroll-anim">
+                        <img decoding="async" src="https://raw.githubusercontent.com/tim-1235/portfolio2/main/dlastrony1.png" alt="Graffiti nadruk 1" data-i18n-alt="alt-graffiti-1">
+                    </div>
+                    <div class="portfolio-card scroll-anim">
+                        <img decoding="async" src="https://raw.githubusercontent.com/tim-1235/portfolio2/main/nastrone2.png" alt="Graffiti nadruk 2" data-i18n-alt="alt-graffiti-2">
+                    </div>
+                    <div class="portfolio-card scroll-anim">
+                        <img decoding="async" src="https://raw.githubusercontent.com/tim-1235/portfolio2/main/nastrone3.png" alt="Graffiti nadruk 3" data-i18n-alt="alt-graffiti-3">
+                    </div>
+                </div>
+
+                <!-- KOLEKCJA PLAŻOWA -->
+                <h3 class="scroll-anim" style="text-align: center; margin: 40px 0 30px; font-size: 1.8rem; opacity: 0.9; font-weight: bold; text-transform: uppercase;" data-i18n="prints-beach-title">
+                    Kolekcja Plażowa
+                </h3>
+                
+                <div class="portfolio-grid">
+                    <div class="portfolio-card scroll-anim">
+                        <img decoding="async" src="https://raw.githubusercontent.com/tim-1235/portfolio2/main/nastrone4.png" alt="Plażowa kolekcja nadruk 1" data-i18n-alt="alt-beach-1">
+                    </div>
+                    <div class="portfolio-card scroll-anim">
+                        <img decoding="async" src="https://raw.githubusercontent.com/tim-1235/portfolio2/main/nastrone5.png" alt="Plażowa kolekcja nadruk 2" data-i18n-alt="alt-beach-2">
+                    </div>
+                    <div class="portfolio-card scroll-anim">
+                        <img decoding="async" src="https://raw.githubusercontent.com/tim-1235/portfolio2/main/nastrone6.png" alt="Plażowa kolekcja nadruk 3" data-i18n-alt="alt-beach-3">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section-wrapper contact-section" id="kontakt">
+            <div class="container">
+                <svg class="doodle doodle-plane floating-doodle parallax-el" viewBox="0 0 100 100" fill="none"
+                    stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10 50 L90 10 L60 90 L45 65 Z M10 50 L45 65 M90 10 L45 65" />
+                    <path d="M5 95 C 20 80, 10 60, 10 50" stroke-width="3" stroke-dasharray="6 6"
+                        stroke="var(--c-bg-paper)" />
+                </svg>
+
+                <h2 class="section-title scroll-anim" data-i18n="contact-title">Kontakt</h2>
+                <div class="contact-desc scroll-anim">
+                    <p data-i18n="contact-intro">Podobają Ci się moje projekty? Chcesz zamówić coś podobnego dla siebie lub po prostu masz do mnie
+                    pytanie? Z przyjemnością z Tobą porozmawiam.</p>
+                </div>
+                <div class="contact-desc scroll-anim" style="text-align: left; padding: 25px; border-radius: 15px; background: rgba(128, 128, 128, 0.15);">
+                    <p style="margin-bottom: 15px; font-weight: bold;" data-i18n="contact-order-heading">Aby rozpocząć zamówienie, w wiadomości podaj:</p>
+                    <ul style="padding-left: 20px; margin-bottom: 25px;">
+                        <li style="margin-bottom: 10px;" data-i18n="contact-li1"><strong>Ilość, rozmiar i kolor</strong> odzieży (bluzy lub koszulki).</li>
+                        <li style="margin-bottom: 10px;" data-i18n="contact-li2"><strong>Link do wybranego ubrania</strong> (marka jest dowolna, ale zależy mi, aby materiał miał w składzie jak najwięcej bawełny).</li>
+                        <li data-i18n="contact-li3"><strong>Werset oraz pomysł na projekt</strong> – opisz dokładnie, co ma się znaleźć na grafice i w jakim stylu ma być wykonana.</li>
+                    </ul>
+
+                    <p style="margin-bottom: 10px; font-weight: bold;" data-i18n="contact-shipping-heading">Wysyłka</p>
+                    <p style="margin-bottom: 0;" data-i18n="contact-shipping-text">
+                        Wszystkie zamówienia wysyłam za pośrednictwem <strong>Paczkomatów InPost</strong>. Szczegóły dostawy (wybór Paczkomatu i dane kontaktowe) ustalimy w trakcie realizacji zamówienia, więc nie musisz podawać ich w pierwszej wiadomości.
+                    </p>
+                </div>    
+                <a class="cta-button scroll-anim js-email-link" data-i18n="cta-contact">Napisz do mnie!</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><span data-i18n="footer-email-label">E-mail:</span> <a class="js-email-link" style="cursor: pointer;">tymofii.pryimak@gmail.com</a> | <span data-i18n="footer-phone-label">Telefon:</span> <a href="tel:+48579540739">+48 579 540 739</a></p>
+        <p style="margin-top: 10px;"><a href="https://docs.google.com/document/d/e/2PACX-1vSC1_MYFrlNgjrDH__P8R3oHomVQVT2ELBmyLFbQ2lf_GUZwLn_0_se9dMovEzcYGnl-Iy-sXhatJF7/pub" target="_blank" rel="noopener noreferrer" data-i18n="footer-privacy" data-i18n-href="href-privacy">Polityka prywatności i zwrotów</a></p>
+    </footer>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </span>
+        <img src="" id="lightbox-img" alt="Powiększone zdjęcie">
+    </div>
+
+    <!-- MODAL POCZTY E-MAIL -->
+    <div class="mail-modal" id="mailModal">
+        <div class="mail-modal-content">
+            <h3 data-i18n="mail-title">Wybierz pocztę</h3>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="mail-btn" id="btn-gmail">Gmail</a>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="mail-btn" id="btn-outlook">Outlook</a>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="mail-btn" id="btn-yahoo">Yahoo</a>
+            <a href="#" class="mail-btn" id="btn-apple">Apple Mail</a>
+            <a href="#" class="mail-btn" id="btn-android" data-i18n="mail-android">Aplikacja Poczty</a>
+            <button class="mail-close" id="mailClose" data-i18n="mail-cancel">Anuluj</button>
+        </div>
+    </div>
+
+    <!-- PRZYCISK POWROTU NA GÓRĘ -->
+    <a href="#top" class="scroll-to-top" id="scrollTopBtn" aria-label="Przewiń do góry">↑</a>
+
+    <!-- PŁYWAJĄCY PRZYCISK I BANER INFORMACJI O COOKIES (RODO / ANALYTICS) -->
+    <aside class="cookie-container" aria-label="Zarządzanie zgodami cookies">
+        <!-- Pływające kółko w prawym dolnym rogu -->
+        <button id="cookieWidgetBtn" class="cookie-float-btn" aria-label="Informacje o plikach cookies" data-i18n-aria="cookie-btn-aria" title="Cookies & RODO">
+            <svg viewBox="0 0 24 24" class="cookie-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path>
+                <path d="M8.5 8.5v.01"></path>
+                <path d="M7.5 15.5v.01"></path>
+                <path d="M15.5 14.5v.01"></path>
+                <path d="M11.5 12.5v.01"></path>
+                <path d="M16 9.5v.01"></path>
+            </svg>
+        </button>
+
+        <!-- Karta powiadomienia / pop-up cookies -->
+        <div id="cookieModal" class="cookie-popup" role="dialog" aria-labelledby="cookieTitle" aria-describedby="cookieDesc">
+            <div class="cookie-popup-header">
+                <div class="cookie-title-wrap">
+                    <span class="cookie-badge-icon">🍪</span>
+                    <h4 id="cookieTitle" data-i18n="cookie-title">Pliki cookies i analityka</h4>
+                </div>
+                <button id="cookieCloseBtn" class="cookie-close-btn" aria-label="Zamknij powiadomienie">&times;</button>
+            </div>
+            <p id="cookieDesc" class="cookie-popup-text" data-i18n="cookie-text">
+                Ta strona używa plików cookies w celu analizy ruchu i optymalizacji serwisu za pośrednictwem narzędzia Google Analytics. Korzystając ze strony, wyrażasz zgodę na ich użycie.
+            </p>
+            <div class="cookie-popup-actions">
+                <a href="https://docs.google.com/document/d/e/2PACX-1vSC1_MYFrlNgjrDH__P8R3oHomVQVT2ELBmyLFbQ2lf_GUZwLn_0_se9dMovEzcYGnl-Iy-sXhatJF7/pub" target="_blank" rel="noopener noreferrer" class="cookie-policy-link" data-i18n="cookie-policy-link" data-i18n-href="href-privacy">Polityka prywatności</a>
+                <button id="cookieAcceptBtn" class="cookie-accept-btn" data-i18n="cookie-accept">Rozumiem</button>
+            </div>
+        </div>
+    </aside>
+
+</body>
+
+</html>

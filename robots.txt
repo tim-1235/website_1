@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tim-1235.github.io/sitemap.xml
