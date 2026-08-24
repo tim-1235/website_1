@@ -4370,11 +4370,15 @@ html[data-style="retro"][data-theme="light"] .collection-title { color: #d05a45;
     margin-bottom: 24px;
     position: relative;
     z-index: 2;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media (max-width: 768px) {
     .realizacje-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        max-width: 320px;
     }
 }
 
