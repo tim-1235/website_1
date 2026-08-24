@@ -37,32 +37,30 @@ document.addEventListener("DOMContentLoaded", () => {
         'nav-contact': 'Contact',
         'style-text': 'Style',
         'style-drawing': '✏️ Drawing',
-        'hero-subtitle': 'Christian Graphics Designs for Clothes',
+        'hero-subtitle': 'Christian graphic designer – I design the print, you choose the garment',
         'hero-cta': 'Order now →',
-        'trust-brands': 'Outhorn & 4F and other brands',
-        'trust-dtf': 'DTF print – durable & vivid',
-        'trust-custom': 'Custom design',
+        'trust-design': 'Graphics designed by me',
+        'trust-garment': 'Garment chosen by you',
+        'trust-dtf': 'DTF print via independent print shop',
         'trust-shipping': 'InPost delivery',
         'about-title': 'About Me',
         'about-p1': "Hi! My name is Tymofii, and my design journey didn't start with big business plans, but with a simple need of the heart and... an empty closet.",
         'about-p2': "It all started in 2023. I was 15 at the time and simply wanted to wear cool, Christian t-shirts that I couldn't find anywhere – so I started making them myself.",
-        'about-p3': "Today my mission is for you to be able to wear clothes that are well made, look good, and carry a real message. I believe the Gospel doesn't only need to be spoken – it can also be shown through what we wear.",
-        'about-p4': 'To ensure the highest quality, I buy proven brands such as <strong>Outhorn</strong> and <strong>4F</strong>, but I\'m not limited to them. I don\'t do the printing myself – the prints are made by specialists at a local print shop in <strong>Zielona Góra</strong>, who use modern, extremely durable <strong>DTF</strong> technology.',
-        'about-disclaimer': 'Important information: My designs are an independent creative initiative. I use the clothing of the above brands as a base for my own modifications. This website and the products offered are not affiliated with, endorsed by, or an official collaboration with Outhorn or 4F.',
+        'about-p3': "Today I design Christian graphics on commission – every print is my own work, from sketch to final file. I believe the Gospel doesn't only need to be spoken – it can also be shown through what we wear.",
+        'about-p4': 'I offer graphic design and DTF print ordering on a t-shirt or hoodie that <strong>you choose</strong> (any brand). I don\'t manufacture clothing or operate a brand store – printing is done through an independent local print shop in <strong>Zielona Góra</strong>. Brands visible in portfolio photos are shown only as examples of the garment base; I am not affiliated with them.',
+        'about-disclaimer': 'Legal notice: I am an independent graphic designer. All print designs are my original work. I do not officially collaborate with any clothing brand (including but not limited to Outhorn, 4F, or others). Brand names, logos, and products visible in photos belong to their owners and are used for informational purposes only to show an example of a print on customer-chosen garments.',
         'portfolio-title': 'Past Work',
-        'portfolio-desc': 'Examples of finished garments from previous orders and personal use.',
-        'alt-green-1': 'Green collection 1',
-        'alt-green-2': 'Green collection 2',
-        'alt-green-3': 'Green collection 3',
-        'alt-purple-1': 'Purple collection 1',
-        'alt-purple-2': 'Purple collection 2',
-        'alt-purple-3': 'Purple collection 3',
-        'alt-blue-1': 'Blue collection 1',
-        'alt-blue-2': 'Blue collection 2',
-        'alt-blue-3': 'Blue collection 3',
-        'attr-sun': 'Sun: Magnific',
+        'portfolio-desc': 'Photos of my designs on finished garments – click to enlarge.',
+        'portfolio-disclaimer': 'Photos show my original print designs on customer-chosen garments. Brands visible on clothing are not partners or sponsors of this website.',
+        'portfolio-attribution': 'Sun element in selected designs: <a href="https://www.magnific.com" target="_blank" rel="noopener noreferrer">Magnific</a>',
+        'alt-realizacja-1': 'Past work – green hoodie with print',
+        'alt-realizacja-2': 'Past work – purple hoodie with print',
+        'alt-realizacja-3': 'Past work – blue hoodie with print',
+        'alt-realizacja-4': 'Past work – blue t-shirt with print',
+        'alt-realizacja-5': 'Past work – t-shirt with sun print',
+        'alt-realizacja-6': 'Past work – green t-shirt with print',
         'prints-title': 'Available Prints',
-        'prints-desc': 'Below are the available prints that can be ordered on a t-shirt or hoodie.<br> I also create custom designs on request.<br><br><strong>My collection of designs keeps growing, and new designs will appear here over time – be sure to check back regularly!</strong>',
+        'prints-desc': 'Below are my original print designs that you can order on a t-shirt or hoodie of your choice.<br> I also create fully custom graphics on request.<br><br><strong>My collection keeps growing – check back regularly for new designs!</strong>',
         'prints-graffiti-title': 'Graffiti Collection',
         'prints-beach-title': 'Beach Collection',
         'alt-graffiti-1': 'Graffiti print 1',
@@ -77,14 +75,15 @@ document.addEventListener("DOMContentLoaded", () => {
         'contact-intro': "Like my designs? Want to order something similar for yourself, or just have a question for me? I'd be happy to talk with you.",
         'contact-order-heading': 'To start an order, please include in your message:',
         'contact-li1': '<strong>Quantity, size, and color</strong> of the garment (hoodie or t-shirt).',
-        'contact-li2': "<strong>Link to the chosen garment</strong> (any brand works, but I'd prefer the material to contain as much cotton as possible).",
-        'contact-li3': '<strong>Verse and design idea</strong> – describe exactly what should be on the graphic and in what style it should be made.',
+        'contact-li2': "<strong>Link to the chosen garment</strong> (any brand – you decide what the print goes on; I prefer cotton in the fabric blend).",
+        'contact-li3': '<strong>Theme and verse</strong> – describe the message the graphic should carry and the style you want. I create the design – you provide the idea, not a finished file.',
         'contact-shipping-heading': 'Shipping',
         'contact-shipping-text': "All orders are shipped via <strong>InPost Parcel Lockers</strong>. Delivery details (choice of locker and contact info) will be arranged while processing your order, so you don't need to include them in your first message.",
         'cta-contact': 'Write to me!',
         'footer-email-label': 'Email:',
         'footer-phone-label': 'Phone:',
         'footer-privacy': 'Privacy and Returns Policy',
+        'footer-disclaimer': 'Tymofii Pryimak – independent graphic designer. I offer graphic design and DTF print ordering on customer-chosen garments. I am not affiliated with, sponsored by, or authorized by any clothing brand. All trademarks belong to their respective owners.',
         'mail-title': 'Choose your email',
         'mail-android': 'Mail App',
         'mail-cancel': 'Cancel',
@@ -99,10 +98,10 @@ document.addEventListener("DOMContentLoaded", () => {
         'cookie-btn-aria': 'Cookie information'
     };
     const pageMeta = {
-        title: { pl: document.title, en: 'Tymofii Pryimak - Christian Clothing with a Message' },
+        title: { pl: document.title, en: 'Tymofii Pryimak – Christian Graphic Designer | Custom Prints for Apparel' },
         description: {
-            pl: document.querySelector('meta[name="description"]')?.getAttribute('content') || "Poznaj projekty Tymofii Pryimaka. Unikalne, chrześcijańskie ubrania tworzone z pasją.",
-            en: "Discover Tymofii Pryimak's designs. Unique, Christian clothing made with passion. See a portfolio of hoodies with gospel messages and DTF prints."
+            pl: document.querySelector('meta[name="description"]')?.getAttribute('content') || "Chrześcijański grafik projektujący własne nadruki na zamówienie.",
+            en: "Christian graphic designer creating custom print designs. DTF printing on customer-chosen garments via an independent print shop. Not affiliated with any clothing brands."
         }
     };
 
@@ -297,7 +296,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // LIGHTBOX
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
-    document.querySelectorAll('.portfolio-card img, .strip-card img').forEach(img => {
+    document.querySelectorAll('.portfolio-card img, .realizacje-grid img').forEach(img => {
         img.addEventListener('click', () => {
             lightboxImg.src = img.src;
             lightbox.classList.add('active');
