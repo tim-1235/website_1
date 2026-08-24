@@ -32,20 +32,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const langToggleBtn = document.getElementById('langToggle');
     const translations = {
         'nav-about': 'About Me',
-        'nav-portfolio': 'Portfolio',
         'nav-prints': 'Prints',
+        'nav-portfolio': 'Past Work',
         'nav-contact': 'Contact',
         'style-text': 'Style',
         'style-drawing': '✏️ Drawing',
-        'hero-subtitle': 'Welcome :) to my site',
+        'hero-subtitle': 'Christian Graphics Designs for Clothes',
+        'hero-cta': 'Order now →',
+        'trust-brands': 'Outhorn & 4F and other brands',
+        'trust-dtf': 'DTF print – durable & vivid',
+        'trust-custom': 'Custom design',
+        'trust-shipping': 'InPost delivery',
         'about-title': 'About Me',
         'about-p1': "Hi! My name is Tymofii, and my design journey didn't start with big business plans, but with a simple need of the heart and... an empty closet.",
         'about-p2': "It all started in 2023. I was 15 at the time and simply wanted to wear cool, Christian t-shirts that I couldn't find anywhere – so I started making them myself.",
         'about-p3': "Today my mission is for you to be able to wear clothes that are well made, look good, and carry a real message. I believe the Gospel doesn't only need to be spoken – it can also be shown through what we wear.",
         'about-p4': 'To ensure the highest quality, I buy proven brands such as <strong>Outhorn</strong> and <strong>4F</strong>, but I\'m not limited to them. I don\'t do the printing myself – the prints are made by specialists at a local print shop in <strong>Zielona Góra</strong>, who use modern, extremely durable <strong>DTF</strong> technology.',
         'about-disclaimer': 'Important information: My designs are an independent creative initiative. I use the clothing of the above brands as a base for my own modifications. This website and the products offered are not affiliated with, endorsed by, or an official collaboration with Outhorn or 4F.',
-        'portfolio-title': 'Portfolio',
-        'portfolio-desc': 'The graphics and designs below are not for sale. They were made for personal use and serve only as a showcase of my skills.',
+        'portfolio-title': 'Past Work',
+        'portfolio-desc': 'Examples of finished garments from previous orders and personal use.',
         'alt-green-1': 'Green collection 1',
         'alt-green-2': 'Green collection 2',
         'alt-green-3': 'Green collection 3',
@@ -66,6 +71,8 @@ document.addEventListener("DOMContentLoaded", () => {
         'alt-beach-1': 'Beach collection print 1',
         'alt-beach-2': 'Beach collection print 2',
         'alt-beach-3': 'Beach collection print 3',
+        'prints-cta-text': 'Don\'t see a design you like? I\'ll create a graphic especially for you.',
+        'prints-cta-btn': 'Order a custom design →',
         'contact-title': 'Contact',
         'contact-intro': "Like my designs? Want to order something similar for yourself, or just have a question for me? I'd be happy to talk with you.",
         'contact-order-heading': 'To start an order, please include in your message:',
@@ -290,7 +297,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // LIGHTBOX
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
-    document.querySelectorAll('.portfolio-card img').forEach(img => {
+    document.querySelectorAll('.portfolio-card img, .strip-card img').forEach(img => {
         img.addEventListener('click', () => {
             lightboxImg.src = img.src;
             lightbox.classList.add('active');

@@ -7,7 +7,7 @@
     
     <!-- Podstawowe metatagi SEO -->
     <title>Tymofii Pryimak - Chrześcijańskie ubrania z przesłaniem</title>
-    <meta name="description" content="Poznaj projekty Tymofii Pryimaka. Unikalne, chrześcijańskie ubrania tworzone z pasją. Zobacz portfolio bluz z ewangelicznym przesłaniem i nadrukiem DTF.">
+    <meta name="description" content="Zamów chrześcijańskie bluzy i koszulki z nadrukiem DTF na zamówienie. Solidna odzież marek Outhorn i 4F z ewangelicznym przesłaniem. Kontakt: tymofii.pryimak@gmail.com">
     <meta name="author" content="Tymofii Pryimak">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="googlebot" content="index, follow">
@@ -20,9 +20,9 @@
     <meta property="og:locale" content="pl_PL">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Tymofii Pryimak - Chrześcijańskie ubrania z przesłaniem">
-    <meta property="og:description" content="Poznaj projekty Tymofii Pryimaka. Unikalne, chrześcijańskie ubrania tworzone z pasją. Zobacz portfolio bluz z ewangelicznym przesłaniem i nadrukiem DTF.">
+    <meta property="og:description" content="Zamów chrześcijańskie bluzy i koszulki z własnym nadrukiem DTF. Solidna odzież z ewangelicznym przesłaniem, wysyłka InPost.">
     <meta property="og:url" content="https://tim-1235.github.io/">
-    <meta property="og:site_name" content="Tymofii Pryimak Portfolio">
+    <meta property="og:site_name" content="Tymofii Pryimak">
     <meta property="og:image" content="https://raw.githubusercontent.com/tim-1235/photos/main/20250122_183302.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -31,7 +31,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Tymofii Pryimak - Chrześcijańskie ubrania z przesłaniem">
-    <meta name="twitter:description" content="Poznaj projekty Tymofii Pryimaka. Unikalne, chrześcijańskie ubrania tworzone z pasją. Zobacz portfolio bluz z ewangelicznym przesłaniem i nadrukiem DTF.">
+    <meta name="twitter:description" content="Zamów chrześcijańskie bluzy i koszulki z własnym nadrukiem DTF. Solidna odzież z ewangelicznym przesłaniem.">
     <meta name="twitter:image" content="https://raw.githubusercontent.com/tim-1235/photos/main/20250122_183302.jpg">
 
     <!-- Google Analytics (GA4) -->
@@ -54,7 +54,7 @@
           "@id": "https://tim-1235.github.io/#website",
           "url": "https://tim-1235.github.io/",
           "name": "Tymofii Pryimak - Chrześcijańskie ubrania z przesłaniem",
-          "description": "Unikalne chrześcijańskie ubrania tworzone z pasją. Portfolio bluz i koszulek z ewangelicznym przesłaniem.",
+          "description": "Chrześcijańskie bluzy i koszulki z nadrukiem DTF na zamówienie. Solidna odzież z ewangelicznym przesłaniem.",
           "inLanguage": ["pl", "en"]
         },
         {
@@ -94,8 +94,8 @@
     <nav class="top-nav">
         <div class="nav-links">
             <a href="#o-mnie" data-i18n="nav-about">O mnie</a>
-            <a href="#portfolio" data-i18n="nav-portfolio">Portfolio</a>
             <a href="#dostepne-nadruki" data-i18n="nav-prints">Nadruki</a>
+            <a href="#portfolio" data-i18n="nav-portfolio">Realizacje</a>
             <a href="#kontakt" data-i18n="nav-contact">Kontakt</a>
         </div>
         <div class="nav-actions">
@@ -202,9 +202,35 @@
             </svg>
 
             <h1>Tymofii Pryimak</h1>
-            <p data-i18n="hero-subtitle">Witaj :) na mojej stronie</p>
+            <p class="hero-tagline" data-i18n="hero-subtitle">Chrześcijańskie bluzy i koszulki z Twoim nadrukiem DTF</p>
+            <a class="hero-cta-btn js-email-link scroll-anim" id="hero-cta-btn" data-i18n="hero-cta">Zamów teraz →</a>
         </div>
     </header>
+
+    <!-- PASEK ZAUFANIA -->
+    <div class="trust-bar">
+        <div class="trust-bar-inner">
+            <div class="trust-item">
+                <span class="trust-icon">👕</span>
+                <span data-i18n="trust-brands">Outhorn &amp; 4F i inne marki</span>
+            </div>
+            <div class="trust-sep"></div>
+            <div class="trust-item">
+                <span class="trust-icon">🖨️</span>
+                <span data-i18n="trust-dtf">Nadruk DTF – trwały i wyraźny</span>
+            </div>
+            <div class="trust-sep"></div>
+            <div class="trust-item">
+                <span class="trust-icon">✏️</span>
+                <span data-i18n="trust-custom">Grafika na zamówienie</span>
+            </div>
+            <div class="trust-sep"></div>
+            <div class="trust-item">
+                <span class="trust-icon">📦</span>
+                <span data-i18n="trust-shipping">Wysyłka InPost</span>
+            </div>
+        </div>
+    </div>
 
     <main>
         <section class="section-wrapper" id="o-mnie">
@@ -246,63 +272,9 @@
 
         <div class="section-divider"></div>
 
-        <section class="section-wrapper" id="portfolio">
-            <div class="container">
-                <svg class="doodle doodle-arrow floating-doodle parallax-el" viewBox="0 0 100 100" fill="none"
-                    stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M20 10 Q60 5 80 40 T70 90 M50 75 L70 95 L85 65" />
-                </svg>
+        <!-- SEKCJA: DOSTĘPNE NADRUKI - MOVED BEFORE PORTFOLIO -->
 
-                <h2 class="section-title scroll-anim" data-i18n="portfolio-title">Portfolio</h2>
-                <p class="portfolio-desc scroll-anim" data-i18n="portfolio-desc">
-                    Poniższe grafiki i projekty nie są na sprzedaż. Zostały wykonane w ramach użytku osobistego i służą wyłącznie jako pokaz moich umiejętności.
-                </p>
-
-                <!-- KOLEKCJA ZIELONA -->
-                <div class="portfolio-grid">
-                    <div class="portfolio-card scroll-anim">
-                        <img decoding="async" src="https://raw.githubusercontent.com/tim-1235/photos/main/20250817_101405.jpg" alt="Kolekcja zielona 1" data-i18n-alt="alt-green-1">
-                    </div>
-                    <div class="portfolio-card scroll-anim">
-                        <img decoding="async" src="https://raw.githubusercontent.com/tim-1235/photos/main/20250817_101138.jpg" alt="Kolekcja zielona 2" data-i18n-alt="alt-green-2">
-                    </div>
-                    <div class="portfolio-card scroll-anim">
-                        <img decoding="async" src="https://raw.githubusercontent.com/tim-1235/photos/main/20250817_101154.jpg" alt="Kolekcja zielona 3" data-i18n-alt="alt-green-3">
-                    </div>
-                </div>
-
-                <!-- KOLEKCJA FIOLETOWA -->
-                <div class="portfolio-grid">
-                    <div class="portfolio-card scroll-anim">
-                        <img decoding="async" src="https://raw.githubusercontent.com/tim-1235/photos/main/20250817_101730.jpg" alt="Kolekcja fioletowa 1" data-i18n-alt="alt-purple-1">
-                    </div>
-                    <div class="portfolio-card scroll-anim">
-                        <img decoding="async" src="https://raw.githubusercontent.com/tim-1235/photos/main/20250817_101822.jpg" alt="Kolekcja fioletowa 2" data-i18n-alt="alt-purple-2">
-                    </div>
-                    <div class="portfolio-card scroll-anim">
-                        <img decoding="async" src="https://raw.githubusercontent.com/tim-1235/photos/main/20250817_101835.jpg" alt="Kolekcja fioletowa 3" data-i18n-alt="alt-purple-3">
-                    </div>
-                </div>
-
-                <!-- KOLEKCJA NIEBIESKA -->
-                <div class="portfolio-grid">
-                    <div class="portfolio-card scroll-anim">
-                        <img decoding="async" src="https://raw.githubusercontent.com/tim-1235/photos/main/20250817_102133.jpg" alt="Kolekcja niebieska 1" data-i18n-alt="alt-blue-1">
-                    </div>
-                    <div class="portfolio-card scroll-anim">
-                        <img decoding="async" src="https://raw.githubusercontent.com/tim-1235/photos/main/20250817_102214.jpg" alt="Kolekcja niebieska 2" data-i18n-alt="alt-blue-2">
-                        <a href="https://www.magnific.com" target="_blank" rel="noopener noreferrer" class="freepik-attr" data-i18n="attr-sun">Słońce: Magnific</a>
-                    </div>
-                    <div class="portfolio-card scroll-anim">
-                        <img decoding="async" src="https://raw.githubusercontent.com/tim-1235/photos/main/20250823_154747.jpg" alt="Kolekcja niebieska 3" data-i18n-alt="alt-blue-3">
-                        <a href="https://www.magnific.com" target="_blank" rel="noopener noreferrer" class="freepik-attr" data-i18n="attr-sun">Słońce: Magnific</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="section-divider"></div>
-
+        <!-- SEKCJA: DOSTĘPNE NADRUKI (PRODUKTY) -->
         <section class="section-wrapper" id="dostepne-nadruki">
             <div class="container">
                 <h2 class="section-title scroll-anim" data-i18n="prints-title">Dostępne nadruki</h2>
@@ -314,7 +286,7 @@
                 </p>
 
                 <!-- KOLEKCJA GRAFFITI -->
-                <h3 class="scroll-anim" style="text-align: center; margin: 40px 0 30px; font-size: 1.8rem; opacity: 0.9; font-weight: bold; text-transform: uppercase;" data-i18n="prints-graffiti-title">
+                <h3 class="collection-title scroll-anim" data-i18n="prints-graffiti-title">
                     Kolekcja Graffiti
                 </h3>
                 
@@ -331,7 +303,7 @@
                 </div>
 
                 <!-- KOLEKCJA PLAŻOWA -->
-                <h3 class="scroll-anim" style="text-align: center; margin: 40px 0 30px; font-size: 1.8rem; opacity: 0.9; font-weight: bold; text-transform: uppercase;" data-i18n="prints-beach-title">
+                <h3 class="collection-title scroll-anim" data-i18n="prints-beach-title">
                     Kolekcja Plażowa
                 </h3>
                 
@@ -347,6 +319,63 @@
                     </div>
                 </div>
 
+                <div class="prints-cta scroll-anim">
+                    <p data-i18n="prints-cta-text">Nie widzisz wzoru, który Cię interesuje? Stworzę grafikę specjalnie dla Ciebie.</p>
+                    <a class="cta-button js-email-link" data-i18n="prints-cta-btn">Zamów własny projekt →</a>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- SEKCJA: REALIZACJE (PORTFOLIO — zminimalizowane) -->
+        <section class="section-wrapper portfolio-section-compact" id="portfolio">
+            <div class="container">
+                <svg class="doodle doodle-arrow floating-doodle parallax-el" viewBox="0 0 100 100" fill="none"
+                    stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 10 Q60 5 80 40 T70 90 M50 75 L70 95 L85 65" />
+                </svg>
+
+                <h2 class="section-title scroll-anim" data-i18n="portfolio-title">Realizacje</h2>
+                <p class="portfolio-desc scroll-anim" data-i18n="portfolio-desc">
+                    Przykłady gotowych ubrań wykonanych w ramach poprzednich zamówień i użytku osobistego.
+                </p>
+
+                <!-- POZIOMY SCROLL STRIP -->
+                <div class="portfolio-strip scroll-anim">
+                    <div class="portfolio-strip-inner">
+                        <div class="strip-card">
+                            <img decoding="async" src="https://raw.githubusercontent.com/tim-1235/photos/main/20250817_101405.jpg" alt="Realizacja 1" data-i18n-alt="alt-green-1">
+                        </div>
+                        <div class="strip-card">
+                            <img decoding="async" src="https://raw.githubusercontent.com/tim-1235/photos/main/20250817_101138.jpg" alt="Realizacja 2" data-i18n-alt="alt-green-2">
+                        </div>
+                        <div class="strip-card">
+                            <img decoding="async" src="https://raw.githubusercontent.com/tim-1235/photos/main/20250817_101154.jpg" alt="Realizacja 3" data-i18n-alt="alt-green-3">
+                        </div>
+                        <div class="strip-card">
+                            <img decoding="async" src="https://raw.githubusercontent.com/tim-1235/photos/main/20250817_101730.jpg" alt="Realizacja 4" data-i18n-alt="alt-purple-1">
+                        </div>
+                        <div class="strip-card">
+                            <img decoding="async" src="https://raw.githubusercontent.com/tim-1235/photos/main/20250817_101822.jpg" alt="Realizacja 5" data-i18n-alt="alt-purple-2">
+                        </div>
+                        <div class="strip-card">
+                            <img decoding="async" src="https://raw.githubusercontent.com/tim-1235/photos/main/20250817_101835.jpg" alt="Realizacja 6" data-i18n-alt="alt-purple-3">
+                        </div>
+                        <div class="strip-card">
+                            <img decoding="async" src="https://raw.githubusercontent.com/tim-1235/photos/main/20250817_102133.jpg" alt="Realizacja 7" data-i18n-alt="alt-blue-1">
+                        </div>
+                        <div class="strip-card">
+                            <img decoding="async" src="https://raw.githubusercontent.com/tim-1235/photos/main/20250817_102214.jpg" alt="Realizacja 8" data-i18n-alt="alt-blue-2">
+                            <a href="https://www.magnific.com" target="_blank" rel="noopener noreferrer" class="freepik-attr" data-i18n="attr-sun">Słońce: Magnific</a>
+                        </div>
+                        <div class="strip-card">
+                            <img decoding="async" src="https://raw.githubusercontent.com/tim-1235/photos/main/20250823_154747.jpg" alt="Realizacja 9" data-i18n-alt="alt-blue-3">
+                            <a href="https://www.magnific.com" target="_blank" rel="noopener noreferrer" class="freepik-attr" data-i18n="attr-sun">Słońce: Magnific</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
