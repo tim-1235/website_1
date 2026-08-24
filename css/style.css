@@ -4365,10 +4365,11 @@ html[data-style="retro"][data-theme="light"] .collection-title { color: #d05a45;
 }
 
 .realizacje-grid {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: clamp(16px, 3vw, 28px);
     margin-bottom: 24px;
+    position: relative;
+    z-index: 2;
 }
 
 @media (max-width: 768px) {

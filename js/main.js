@@ -38,45 +38,48 @@ document.addEventListener("DOMContentLoaded", () => {
         'style-text': 'Style',
         'style-drawing': '✏️ Drawing',
         'hero-subtitle': 'Christian graphic designer – I design the print, you choose the garment',
-        'hero-cta': 'Order now →',
+        'hero-cta': 'Order a print →',
         'trust-design': 'Graphics designed by me',
         'trust-garment': 'Garment chosen by you',
         'trust-dtf': 'DTF print via independent print shop',
-        'trust-shipping': 'InPost delivery',
+        'trust-shipping': 'InPost shipping',
         'about-title': 'About Me',
-        'about-p1': "Hi! My name is Tymofii, and my design journey didn't start with big business plans, but with a simple need of the heart and... an empty closet.",
-        'about-p2': "It all started in 2023. I was 15 at the time and simply wanted to wear cool, Christian t-shirts that I couldn't find anywhere – so I started making them myself.",
+        'about-p1': "Hi! I'm Tymofii. My design journey didn't start with big business plans, but with a simple need of the heart and… an empty wardrobe.",
+        'about-p2': "It all started in 2023. I was 15 and couldn't find Christian t-shirts I actually wanted to wear – so I started designing and printing them myself.",
         'about-p3': "Today I design Christian graphics on commission – every print is my own work, from sketch to final file. I believe the Gospel doesn't only need to be spoken – it can also be shown through what we wear.",
-        'about-p4': 'I offer graphic design and DTF print ordering on a t-shirt or hoodie that <strong>you choose</strong> (any brand). I don\'t manufacture clothing or operate a brand store – printing is done through an independent local print shop in <strong>Zielona Góra</strong>. Brands visible in portfolio photos are shown only as examples of the garment base; I am not affiliated with them.',
+        'about-p4': 'I offer graphic design and DTF print ordering on a t-shirt or hoodie that <strong>you choose</strong> (any brand). I don\'t manufacture clothing or run a brand store – printing is handled by an independent local print shop in <strong>Zielona Góra</strong>. Brands visible in my portfolio photos are shown only as examples of the garment base; I am not affiliated with them.',
         'about-disclaimer': 'Legal notice: I am an independent graphic designer. All print designs are my original work. I do not officially collaborate with any clothing brand (including but not limited to Outhorn, 4F, or others). Brand names, logos, and products visible in photos belong to their owners and are used for informational purposes only to show an example of a print on customer-chosen garments.',
         'portfolio-title': 'Past Work',
         'portfolio-desc': 'Photos of my designs on finished garments – click to enlarge.',
         'portfolio-disclaimer': 'Photos show my original print designs on customer-chosen garments. Brands visible on clothing are not partners or sponsors of this website.',
         'portfolio-attribution': 'Sun element in selected designs: <a href="https://www.magnific.com" target="_blank" rel="noopener noreferrer">Magnific</a>',
         'alt-realizacja-1': 'Past work – green hoodie with print',
-        'alt-realizacja-2': 'Past work – purple hoodie with print',
-        'alt-realizacja-3': 'Past work – blue hoodie with print',
-        'alt-realizacja-4': 'Past work – blue t-shirt with print',
-        'alt-realizacja-5': 'Past work – t-shirt with sun print',
-        'alt-realizacja-6': 'Past work – green t-shirt with print',
+        'alt-realizacja-2': 'Past work – green t-shirt with print',
+        'alt-realizacja-3': 'Past work – green t-shirt with print',
+        'alt-realizacja-4': 'Past work – purple hoodie with print',
+        'alt-realizacja-5': 'Past work – purple hoodie with print',
+        'alt-realizacja-6': 'Past work – purple hoodie with print',
+        'alt-realizacja-7': 'Past work – blue hoodie with print',
+        'alt-realizacja-8': 'Past work – blue t-shirt with print',
+        'alt-realizacja-9': 'Past work – t-shirt with sun print',
         'prints-title': 'Available Prints',
         'prints-desc': 'Below are my original print designs that you can order on a t-shirt or hoodie of your choice.<br> I also create fully custom graphics on request.<br><br><strong>My collection keeps growing – check back regularly for new designs!</strong>',
         'prints-graffiti-title': 'Graffiti Collection',
         'prints-beach-title': 'Beach Collection',
-        'alt-graffiti-1': 'Graffiti print 1',
-        'alt-graffiti-2': 'Graffiti print 2',
-        'alt-graffiti-3': 'Graffiti print 3',
-        'alt-beach-1': 'Beach collection print 1',
-        'alt-beach-2': 'Beach collection print 2',
-        'alt-beach-3': 'Beach collection print 3',
-        'prints-cta-text': 'Don\'t see a design you like? I\'ll create a graphic especially for you.',
+        'alt-graffiti-1': 'Graffiti print design 1',
+        'alt-graffiti-2': 'Graffiti print design 2',
+        'alt-graffiti-3': 'Graffiti print design 3',
+        'alt-beach-1': 'Beach collection print design 1',
+        'alt-beach-2': 'Beach collection print design 2',
+        'alt-beach-3': 'Beach collection print design 3',
+        'prints-cta-text': 'Don\'t see a design you like? I\'ll create a custom graphic for you.',
         'prints-cta-btn': 'Order a custom design →',
         'contact-title': 'Contact',
-        'contact-intro': "Like my designs? Want to order something similar for yourself, or just have a question for me? I'd be happy to talk with you.",
+        'contact-intro': 'Like my graphics? Want to order a custom print on a garment of your choice, or have a question? Drop me a message – happy to chat.',
         'contact-order-heading': 'To start an order, please include in your message:',
         'contact-li1': '<strong>Quantity, size, and color</strong> of the garment (hoodie or t-shirt).',
         'contact-li2': "<strong>Link to the chosen garment</strong> (any brand – you decide what the print goes on; I prefer cotton in the fabric blend).",
-        'contact-li3': '<strong>Theme and verse</strong> – describe the message the graphic should carry and the style you want. I create the design – you provide the idea, not a finished file.',
+        'contact-li3': '<strong>Theme and Bible verse</strong> – describe the message the graphic should carry and the style you want. I create the design – you provide the idea, not a finished file.',
         'contact-shipping-heading': 'Shipping',
         'contact-shipping-text': "All orders are shipped via <strong>InPost Parcel Lockers</strong>. Delivery details (choice of locker and contact info) will be arranged while processing your order, so you don't need to include them in your first message.",
         'cta-contact': 'Write to me!',
@@ -100,8 +103,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const pageMeta = {
         title: { pl: document.title, en: 'Tymofii Pryimak – Christian Graphic Designer | Custom Prints for Apparel' },
         description: {
-            pl: document.querySelector('meta[name="description"]')?.getAttribute('content') || "Chrześcijański grafik projektujący własne nadruki na zamówienie.",
-            en: "Christian graphic designer creating custom print designs. DTF printing on customer-chosen garments via an independent print shop. Not affiliated with any clothing brands."
+            pl: document.querySelector('meta[name="description"]')?.getAttribute('content') || 'Chrześcijański grafik projektujący własne nadruki na zamówienie.',
+            en: 'Christian graphic designer creating custom print designs. DTF printing on customer-chosen garments via an independent print shop. Not affiliated with any clothing brands. Contact: tymofii.pryimak@gmail.com'
         }
     };
 
@@ -296,7 +299,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // LIGHTBOX
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
-    document.querySelectorAll('.portfolio-card img, .realizacje-grid img').forEach(img => {
+    document.querySelectorAll('.portfolio-card img').forEach(img => {
         img.addEventListener('click', () => {
             lightboxImg.src = img.src;
             lightbox.classList.add('active');
