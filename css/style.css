@@ -1182,8 +1182,9 @@ html {
             bottom: 0;
             z-index: 0;
             background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url('https://raw.githubusercontent.com/tim-1235/portfolio2/main/tp_1a2.png');
-            background-size: cover;
+            background-size: cover, contain;
             background-position: center;
+            background-repeat: no-repeat;
             background-attachment: fixed;
             animation: bg-subtle-zoom 25s infinite alternate ease-in-out;
         }
