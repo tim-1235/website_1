@@ -128,6 +128,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let currentLang = safeGetItem('lang') || 'pl';
 
+    const buildFlagSvg = (lang) => {
+        const flagSvg = {
+            pl: `
+                <svg class="lang-toggle-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 12" aria-hidden="true">
+                    <rect width="20" height="6" fill="#fff"/>
+                    <rect y="6" width="20" height="6" fill="#DC143C"/>
+                </svg>
+            `,
+            en: `
+                <svg class="lang-toggle-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" aria-hidden="true">
+                    <rect width="60" height="30" fill="#012169"/>
+                    <path d="M0 0L60 30M60 0L0 30" stroke="#fff" stroke-width="6"/>
+                    <path d="M0 0L60 30M60 0L0 30" stroke="#C8102E" stroke-width="3"/>
+                    <path d="M0 15H60M30 0V30" stroke="#fff" stroke-width="10"/>
+                    <path d="M0 15H60M30 0V30" stroke="#C8102E" stroke-width="6"/>
+                </svg>
+            `
+        };
+
+        return flagSvg[lang] || flagSvg.pl;
+    };
+
+    const renderLanguageToggle = (lang) => {
+        const label = lang === 'en' ? 'EN' : 'PL';
+        langToggleBtn.innerHTML = `${buildFlagSvg(lang)}<span class="lang-toggle-label">${label}</span>`;
+        langToggleBtn.setAttribute('aria-label', lang === 'en' ? 'Zmień język na polski' : 'Change language to English');
+    };
+
     const applyLanguage = (lang) => {
         currentLang = lang;
         rootHtml.setAttribute('lang', lang);
@@ -161,9 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) metaDesc.setAttribute('content', pageMeta.description[lang] || pageMeta.description.pl);
 
-        langToggleBtn.innerHTML = lang === 'en' ? '🇬🇧 EN' : '🇵🇱 PL';
-        langToggleBtn.setAttribute('aria-label', lang === 'en' ? 'Zmień język na polski' : 'Change language to English');
-
+        renderLanguageToggle(lang);
         updateThemeToggleText();
     };
 

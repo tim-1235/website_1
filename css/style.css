@@ -656,6 +656,19 @@ html {
             outline: none;
         }
 
+        #langToggle .lang-toggle-icon {
+            display: block;
+            width: 1.15rem;
+            height: auto;
+            border-radius: 2px;
+            flex-shrink: 0;
+            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2);
+        }
+
+        #langToggle .lang-toggle-label {
+            line-height: 1;
+        }
+
         .style-switcher-menu {
             position: absolute;
             top: 100%;
