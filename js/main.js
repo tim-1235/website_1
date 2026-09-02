@@ -49,24 +49,25 @@ document.addEventListener("DOMContentLoaded", () => {
         'about-p3': "Today I design Christian graphics on commission – I put together every print myself, from idea to final file. I believe the Gospel doesn't only need to be spoken – it can also be shown through what we wear.",
         'about-p4': 'I offer graphic design and DTF print ordering on a t-shirt or hoodie that <strong>you choose</strong> (any brand). I don\'t manufacture clothing or run a brand store – printing is handled by an independent local print shop in <strong>Zielona Góra</strong>. Brands visible in my portfolio photos are shown only as examples of the garment base; I am not affiliated with them.',
         'about-disclaimer': "Legal notice: I am an independent graphic designer. I handle the design and composition of the prints – I'm not always the creator of every graphic element I use. I do not officially collaborate with any clothing brand (including but not limited to Outhorn, 4F, or others). Brand names, logos, and products visible in photos belong to their owners and are used for informational purposes only to show an example of a print on customer-chosen garments.",
+        'alt-about-img': 'Tymofii Pryimak – Christian graphic designer at work with graphics tablet',
         'portfolio-title': 'Past Work',
         'portfolio-desc': 'Photos of my designs on finished garments – click to enlarge.',
         'portfolio-personal-notice': "Note: at the moment, all past works shown here were made for my own personal use – these aren't customer order photos yet.",
         'portfolio-disclaimer': 'Photos show print designs I have designed, on customer-chosen garments. Brands visible on clothing are not partners or sponsors of this website.',
         'portfolio-attribution': 'Sun element in selected designs: <a href="https://www.magnific.com" target="_blank" rel="noopener noreferrer">Magnific</a>',
-        'alt-realizacja-1': 'Beige hoodie – I Put My Faith In Jesus rose print design',
-        'alt-realizacja-2': 'Purple hoodie – Glory Of God dove print design',
-        'alt-realizacja-3': 'Blue hoodie – Living For Jesus Matthew 6:33 print design',
+        'alt-realizacja-1': 'Beige hoodie with I Put My Faith In Jesus rose print – project by Tymofii Pryimak',
+        'alt-realizacja-2': 'Purple hoodie with Glory Of God dove print – project by Tymofii Pryimak',
+        'alt-realizacja-3': 'Blue hoodie with Living For Jesus Mt 6:33 print – project by Tymofii Pryimak',
         'prints-title': 'Available Prints',
         'prints-desc': 'Below are print designs I have designed, which you can order on a t-shirt or hoodie of your choice.<br> I also create fully custom graphics on request.<br><br><strong>My collection keeps growing – check back regularly for new designs!</strong>',
-        'prints-graffiti-title': 'Graffiti Collection',
-        'prints-beach-title': 'Beach Collection',
-        'alt-graffiti-1': 'Graffiti print design 1',
-        'alt-graffiti-2': 'Graffiti print design 2',
-        'alt-graffiti-3': 'Graffiti print design 3',
-        'alt-beach-1': 'Beach collection print design 1',
-        'alt-beach-2': 'Beach collection print design 2',
-        'alt-beach-3': 'Beach collection print design 3',
+        'prints-polish-title': 'Polish Designs',
+        'prints-english-title': 'English Designs',
+        'alt-print-pl-1': 'Christian print design Jesus Is My Lord – graphic design for apparel',
+        'alt-print-pl-2': 'Christian print design Jesus Master of Masters – garment graphic design',
+        'alt-print-pl-3': 'Christian print design Jesus Is My Salvation – graphic design for t-shirts and hoodies',
+        'alt-print-en-1': 'Christian print design Jesus Is King – custom graphic for hoodies and shirts',
+        'alt-print-en-2': 'Christian print design Jesus Saves – apparel graphic design',
+        'alt-print-en-3': 'Christian print design Jesus Won – graphic design for Christian apparel',
         'prints-cta-text': 'Don\'t see a design you like? I\'ll create a custom graphic for you.',
         'prints-cta-btn': 'Order a custom design →',
         'contact-title': 'Contact',
@@ -141,6 +142,14 @@ document.addEventListener("DOMContentLoaded", () => {
         i18nHrefEls.forEach(el => {
             const key = el.getAttribute('data-i18n-href');
             el.setAttribute('href', (lang === 'en' && translations[key]) ? translations[key] : i18nHrefOriginal.get(el));
+        });
+
+        // Dynamicznie wyrenderowane elementy (z atrybutami data-alt-en / data-alt-pl)
+        document.querySelectorAll('.portfolio-card img[data-alt-en]').forEach(img => {
+            const alt = lang === 'en' ? img.getAttribute('data-alt-en') : img.getAttribute('data-alt-pl');
+            const title = lang === 'en' ? img.getAttribute('data-title-en') : img.getAttribute('data-title-pl');
+            if (alt) img.setAttribute('alt', alt);
+            if (title) img.setAttribute('title', title);
         });
 
         document.title = pageMeta.title[lang] || pageMeta.title.pl;
@@ -224,12 +233,14 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const targetId = this.getAttribute('href');
+            if (!targetId || targetId === '#') return;
+
             if (targetId === '#top') {
                 e.preventDefault();
                 window.scrollTo({ top: 0, behavior: "smooth" });
                 return;
             }
-            if (targetId.startsWith('#')) {
+            if (targetId.startsWith('#') && targetId.length > 1) {
                 e.preventDefault();
                 const target = document.querySelector(targetId);
                 if (target) {
@@ -294,19 +305,78 @@ document.addEventListener("DOMContentLoaded", () => {
     // LIGHTBOX
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
-    document.querySelectorAll('.portfolio-card img').forEach(img => {
-        img.addEventListener('click', () => {
-            lightboxImg.src = img.src;
-            lightbox.classList.add('active');
-            document.body.style.overflow = 'hidden';
+    
+    const bindLightboxListeners = () => {
+        document.querySelectorAll('.portfolio-card img').forEach(img => {
+            if (!img._lightboxBound) {
+                img._lightboxBound = true;
+                img.addEventListener('click', () => {
+                    lightboxImg.src = img.src;
+                    lightbox.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            }
         });
-    });
+    };
+    bindLightboxListeners();
+
     lightbox.addEventListener('click', (e) => {
         if (e.target !== lightboxImg) {
             lightbox.classList.remove('active');
             document.body.style.overflow = '';
         }
     });
+
+    // DYNAMICZNE ŁADOWANIE GALERII (site_photos/gallery.json)
+    const initDynamicGallery = async () => {
+        try {
+            const res = await fetch(`./site_photos/gallery.json?t=${Date.now()}`);
+            if (!res.ok) return;
+            const data = await res.json();
+
+            const renderGrid = (gridId, items) => {
+                const grid = document.getElementById(gridId);
+                if (!grid || !Array.isArray(items) || items.length === 0) return;
+
+                grid.innerHTML = items.map(item => {
+                    const altPl = item.alt_pl || item.title_pl || 'Chrześcijański projekt graficzny';
+                    const altEn = item.alt_en || item.title_en || 'Christian graphic design';
+                    const title = (currentLang === 'en' ? item.title_en : item.title_pl) || '';
+                    const initialAlt = currentLang === 'en' ? altEn : altPl;
+
+                    return `
+                        <div class="portfolio-card scroll-anim visible">
+                            <img decoding="async" loading="lazy"
+                                src="${item.src}"
+                                alt="${initialAlt}"
+                                title="${title}"
+                                data-alt-pl="${altPl}"
+                                data-alt-en="${altEn}"
+                                data-title-pl="${item.title_pl || ''}"
+                                data-title-en="${item.title_en || ''}">
+                        </div>
+                    `;
+                }).join('');
+
+                grid.querySelectorAll('.scroll-anim').forEach(el => observer.observe(el));
+            };
+
+            if (data.prints?.polish && data.prints.polish.length > 0) {
+                renderGrid('prints-polish-grid', data.prints.polish);
+            }
+            if (data.prints?.english && data.prints.english.length > 0) {
+                renderGrid('prints-english-grid', data.prints.english);
+            }
+            if (data.past_work && data.past_work.length > 0) {
+                renderGrid('portfolio-grid', data.past_work);
+            }
+
+            bindLightboxListeners();
+        } catch (e) {
+            // Cichy fallback - statyczne HTML karty działają w 100%
+        }
+    };
+    initDynamicGallery();
 
     // ZARZĄDZANIE WIDŻETEM COOKIES (RODO / ANALYTICS)
     const cookieModal = document.getElementById('cookieModal');

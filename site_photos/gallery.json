@@ -1,0 +1,82 @@
+{
+  "prints": {
+    "polish": [
+      {
+        "id": "print-pl-1",
+        "src": "./site_photos/Prints/Polish/Jezus_PANEM_1a.png",
+        "title_pl": "Jezus Moim Panem",
+        "title_en": "Jesus Is My Lord",
+        "alt_pl": "Chrześcijański nadruk Jezus Moim Panem – projekt graficzny na koszulkę i bluzę",
+        "alt_en": "Christian print design Jesus Is My Lord – graphic design for apparel"
+      },
+      {
+        "id": "print-pl-2",
+        "src": "./site_photos/Prints/Polish/Jezus_mistrz_1a.png",
+        "title_pl": "Jezus Mistrz Nad Mistrzami",
+        "title_en": "Jesus Master of Masters",
+        "alt_pl": "Chrześcijański nadruk Jezus Mistrz Nad Mistrzami – projekt na odzież",
+        "alt_en": "Christian print design Jesus Master of Masters – garment graphic design"
+      },
+      {
+        "id": "print-pl-3",
+        "src": "./site_photos/Prints/Polish/Jezus_ratunkiem_1a4.png",
+        "title_pl": "Jezus Moim Ratunkiem",
+        "title_en": "Jesus Is My Salvation",
+        "alt_pl": "Chrześcijański nadruk Jezus Moim Ratunkiem – projekt na koszulkę i bluzę",
+        "alt_en": "Christian print design Jesus Is My Salvation – graphic design for t-shirts and hoodies"
+      }
+    ],
+    "english": [
+      {
+        "id": "print-en-1",
+        "src": "./site_photos/Prints/English/Jesus_King_1a.png",
+        "title_pl": "Jesus Is King",
+        "title_en": "Jesus Is King",
+        "alt_pl": "Chrześcijański nadruk Jesus Is King – projekt graficzny na zamówienie",
+        "alt_en": "Christian print design Jesus Is King – custom graphic for hoodies and shirts"
+      },
+      {
+        "id": "print-en-2",
+        "src": "./site_photos/Prints/English/Jesus_saves_1a.png",
+        "title_pl": "Jesus Saves",
+        "title_en": "Jesus Saves",
+        "alt_pl": "Chrześcijański nadruk Jesus Saves – projekt na odzież",
+        "alt_en": "Christian print design Jesus Saves – apparel graphic design"
+      },
+      {
+        "id": "print-en-3",
+        "src": "./site_photos/Prints/English/Jesus_won_1a2.png",
+        "title_pl": "Jesus Won",
+        "title_en": "Jesus Won",
+        "alt_pl": "Chrześcijański nadruk Jesus Won – projekt graficzny na bluzę lub koszulkę",
+        "alt_en": "Christian print design Jesus Won – graphic design for Christian apparel"
+      }
+    ]
+  },
+  "past_work": [
+    {
+      "id": "work-1",
+      "src": "./site_photos/Past Work/20250817_101405.jpg",
+      "title_pl": "Beżowa bluza – I Put My Faith In Jesus",
+      "title_en": "Beige hoodie – I Put My Faith In Jesus",
+      "alt_pl": "Beżowa bluza z nadrukiem I Put My Faith In Jesus z motywem róży – realizacja Tymofii Pryimak",
+      "alt_en": "Beige hoodie with I Put My Faith In Jesus rose print – project by Tymofii Pryimak"
+    },
+    {
+      "id": "work-2",
+      "src": "./site_photos/Past Work/20250817_101822.jpg",
+      "title_pl": "Fioletowa bluza – Glory Of God",
+      "title_en": "Purple hoodie – Glory Of God",
+      "alt_pl": "Fioletowa bluza z nadrukiem Glory Of God z gołębiem – realizacja Tymofii Pryimak",
+      "alt_en": "Purple hoodie with Glory Of God dove print – project by Tymofii Pryimak"
+    },
+    {
+      "id": "work-3",
+      "src": "./site_photos/Past Work/20250817_102214.jpg",
+      "title_pl": "Niebieska bluza – Living For Jesus",
+      "title_en": "Blue hoodie – Living For Jesus",
+      "alt_pl": "Niebieska bluza z nadrukiem Living For Jesus Mt 6:33 – realizacja Tymofii Pryimak",
+      "alt_en": "Blue hoodie with Living For Jesus Mt 6:33 print – project by Tymofii Pryimak"
+    }
+  ]
+}
