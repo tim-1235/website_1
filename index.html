@@ -10,6 +10,8 @@
     <meta name="description"
         content="Chrześcijański grafik projektujący własne nadruki na zamówienie. Zamawiam druk DTF na odzieży wybranej przez Ciebie u niezależnej drukarni. Bez powiązań z markami odzieżowymi. Kontakt: tymofii.pryimak@gmail.com">
     <meta name="author" content="Tymofii Pryimak">
+    <meta name="application-name" content="Tymofii Pryimak">
+    <meta name="apple-mobile-web-app-title" content="Tymofii Pryimak">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="googlebot" content="index, follow">
     <meta name="theme-color" content="#18191c">
@@ -56,7 +58,11 @@
           "@type": "WebSite",
           "@id": "https://tymofii.pryimak.pl/#website",
           "url": "https://tymofii.pryimak.pl/",
-          "name": "Tymofii Pryimak – Chrześcijański grafik",
+          "name": "Tymofii Pryimak",
+          "alternateName": [
+            "Tymofii Pryimak – Chrześcijański grafik",
+            "Tymofii Pryimak Grafik"
+          ],
           "description": "Chrześcijański grafik projektujący własne nadruki na zamówienie. Nadruk DTF na odzieży wybranej przez klienta, realizowany przez niezależną drukarnię.",
           "inLanguage": ["pl", "en"]
         },
@@ -283,10 +289,11 @@
                             <path d="M80 20 L40 80 M75 27 C85 10 95 15 80 20" />
                             <path d="M80 20 C60 0 10 30 20 60 C30 90 70 90 60 70" stroke-dasharray="5 5" />
                         </svg>
-                        <!-- TYLKO JEDNO ZDJĘCIE -->
+                        <!-- ZDJĘCIE O MNIE -->
                         <img fetchpriority="high"
-                            src="https://raw.githubusercontent.com/tim-1235/photos/main/20250122_183302.jpg"
-                            alt="Tymofii Pryimak">
+                            src="./site_photos/AboutMe/O_mnie.jpeg"
+                            alt="Tymofii Pryimak – chrześcijański grafik przy tablecie graficznym"
+                            data-i18n-alt="alt-about-img">
                     </figure>
                 </div>
             </div>
@@ -294,9 +301,7 @@
 
         <div class="section-divider"></div>
 
-        <!-- SEKCJA: DOSTĘPNE NADRUKI - MOVED BEFORE PORTFOLIO -->
-
-        <!-- SEKCJA: DOSTĘPNE NADRUKI (PRODUKTY) -->
+        <!-- SEKCJA: DOSTĘPNE NADRUKI -->
         <section class="section-wrapper" id="dostepne-nadruki">
             <div class="container">
                 <h2 class="section-title scroll-anim" data-i18n="prints-title">Dostępne nadruki</h2>
@@ -308,49 +313,61 @@
                     <strong>Kolekcja stale rośnie – zaglądaj regularnie po nowe wzory!</strong>
                 </p>
 
-                <!-- KOLEKCJA GRAFFITI -->
-                <h3 class="collection-title scroll-anim" data-i18n="prints-graffiti-title">
-                    Kolekcja Graffiti
+                <!-- POLSKIE WZORY -->
+                <h3 class="collection-title scroll-anim" data-i18n="prints-polish-title">
+                    Polskie Wzory
                 </h3>
 
-                <div class="portfolio-grid">
+                <div class="portfolio-grid" id="prints-polish-grid">
                     <div class="portfolio-card scroll-anim">
-                        <img decoding="async"
-                            src="https://raw.githubusercontent.com/tim-1235/portfolio2/main/dlastrony1.png"
-                            alt="Graffiti nadruk 1" data-i18n-alt="alt-graffiti-1">
+                        <img decoding="async" loading="lazy"
+                            src="./site_photos/Prints/Polish/Jezus_PANEM_1a.png"
+                            alt="Chrześcijański nadruk Jezus Moim Panem – projekt graficzny na koszulkę i bluzę"
+                            title="Jezus Moim Panem"
+                            data-i18n-alt="alt-print-pl-1">
                     </div>
                     <div class="portfolio-card scroll-anim">
-                        <img decoding="async"
-                            src="https://raw.githubusercontent.com/tim-1235/portfolio2/main/nastrone2.png"
-                            alt="Graffiti nadruk 2" data-i18n-alt="alt-graffiti-2">
+                        <img decoding="async" loading="lazy"
+                            src="./site_photos/Prints/Polish/Jezus_mistrz_1a.png"
+                            alt="Chrześcijański nadruk Jezus Mistrz Nad Mistrzami – projekt na odzież"
+                            title="Jezus Mistrz Nad Mistrzami"
+                            data-i18n-alt="alt-print-pl-2">
                     </div>
                     <div class="portfolio-card scroll-anim">
-                        <img decoding="async"
-                            src="https://raw.githubusercontent.com/tim-1235/portfolio2/main/nastrone3.png"
-                            alt="Graffiti nadruk 3" data-i18n-alt="alt-graffiti-3">
+                        <img decoding="async" loading="lazy"
+                            src="./site_photos/Prints/Polish/Jezus_ratunkiem_1a4.png"
+                            alt="Chrześcijański nadruk Jezus Moim Ratunkiem – projekt na koszulkę i bluzę"
+                            title="Jezus Moim Ratunkiem"
+                            data-i18n-alt="alt-print-pl-3">
                     </div>
                 </div>
 
-                <!-- KOLEKCJA PLAŻOWA -->
-                <h3 class="collection-title scroll-anim" data-i18n="prints-beach-title">
-                    Kolekcja Plażowa
+                <!-- ANGIELSKIE WZORY -->
+                <h3 class="collection-title scroll-anim" data-i18n="prints-english-title">
+                    Angielskie Wzory
                 </h3>
 
-                <div class="portfolio-grid">
+                <div class="portfolio-grid" id="prints-english-grid">
                     <div class="portfolio-card scroll-anim">
-                        <img decoding="async"
-                            src="https://raw.githubusercontent.com/tim-1235/portfolio2/main/nastrone4.png"
-                            alt="Plażowa kolekcja nadruk 1" data-i18n-alt="alt-beach-1">
+                        <img decoding="async" loading="lazy"
+                            src="./site_photos/Prints/English/Jesus_King_1a.png"
+                            alt="Chrześcijański nadruk Jesus Is King – projekt graficzny na zamówienie"
+                            title="Jesus Is King"
+                            data-i18n-alt="alt-print-en-1">
                     </div>
                     <div class="portfolio-card scroll-anim">
-                        <img decoding="async"
-                            src="https://raw.githubusercontent.com/tim-1235/portfolio2/main/nastrone5.png"
-                            alt="Plażowa kolekcja nadruk 2" data-i18n-alt="alt-beach-2">
+                        <img decoding="async" loading="lazy"
+                            src="./site_photos/Prints/English/Jesus_saves_1a.png"
+                            alt="Chrześcijański nadruk Jesus Saves – projekt na odzież"
+                            title="Jesus Saves"
+                            data-i18n-alt="alt-print-en-2">
                     </div>
                     <div class="portfolio-card scroll-anim">
-                        <img decoding="async"
-                            src="https://raw.githubusercontent.com/tim-1235/portfolio2/main/nastrone6.png"
-                            alt="Plażowa kolekcja nadruk 3" data-i18n-alt="alt-beach-3">
+                        <img decoding="async" loading="lazy"
+                            src="./site_photos/Prints/English/Jesus_won_1a2.png"
+                            alt="Chrześcijański nadruk Jesus Won – projekt graficzny na bluzę lub koszulkę"
+                            title="Jesus Won"
+                            data-i18n-alt="alt-print-en-3">
                     </div>
                 </div>
 
@@ -377,23 +394,26 @@
                     użytek – nie są to jeszcze zdjęcia z zamówień klientów.
                 </p>
 
-                <div class="portfolio-grid realizacje-grid">
+                <div class="portfolio-grid realizacje-grid" id="portfolio-grid">
                     <div class="portfolio-card scroll-anim">
                         <img decoding="async" loading="lazy"
-                            src="https://raw.githubusercontent.com/tim-1235/photos/main/20250817_101405.jpg"
-                            alt="Beżowa bluza – nadruk I Put My Faith In Jesus z różą"
+                            src="./site_photos/Past Work/20250817_101405.jpg"
+                            alt="Beżowa bluza z nadrukiem I Put My Faith In Jesus z motywem róży – realizacja Tymofii Pryimak"
+                            title="Beżowa bluza – I Put My Faith In Jesus"
                             data-i18n-alt="alt-realizacja-1">
                     </div>
                     <div class="portfolio-card scroll-anim">
                         <img decoding="async" loading="lazy"
-                            src="https://raw.githubusercontent.com/tim-1235/photos/main/20250817_101822.jpg"
-                            alt="Fioletowa bluza – nadruk Glory Of God z gołębiem"
+                            src="./site_photos/Past Work/20250817_101822.jpg"
+                            alt="Fioletowa bluza z nadrukiem Glory Of God z gołębiem – realizacja Tymofii Pryimak"
+                            title="Fioletowa bluza – Glory Of God"
                             data-i18n-alt="alt-realizacja-2">
                     </div>
                     <div class="portfolio-card scroll-anim">
                         <img decoding="async" loading="lazy"
-                            src="https://raw.githubusercontent.com/tim-1235/photos/main/20250817_102214.jpg"
-                            alt="Niebieska bluza – nadruk Living For Jesus, Mt 6:33"
+                            src="./site_photos/Past Work/20250817_102214.jpg"
+                            alt="Niebieska bluza z nadrukiem Living For Jesus Mt 6:33 – realizacja Tymofii Pryimak"
+                            title="Niebieska bluza – Living For Jesus"
                             data-i18n-alt="alt-realizacja-3">
                     </div>
                 </div>
