@@ -90,10 +90,15 @@ document.addEventListener("DOMContentLoaded", () => {
         'cookie-title': 'Cookies & Analytics',
         'cookie-text': 'This website uses cookies to analyze traffic and optimize user experience via Google Analytics. By using this website, you agree to their use.',
         'cookie-accept': 'Got it',
-        'cookie-policy-link': 'Privacy Policy'
+        'cookie-policy-link': 'Privacy Policy',
+        'alt-lightbox': 'Enlarged photo'
     };
     const ariaTranslations = {
         'aria-changestyle': 'Change style',
+        'aria-theme': 'Toggle light/dark mode',
+        'aria-scroll-top': 'Scroll to top',
+        'aria-cookie-aside': 'Cookie consent management',
+        'aria-cookie-close': 'Close notification',
         'cookie-btn-aria': 'Cookie information'
     };
     const pageMeta = {
@@ -202,7 +207,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // LINKI EMAIL
     const email = "tymofii.pryimak@gmail.com";
-    const subject = "Zamówienie";
+    const subject = currentLang === 'en' ? 'Order' : 'Zamówienie';
     const mailUrls = {
         gmail: `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}`,
         outlook: `https://outlook.live.com/mail/0/deeplink/compose?to=${email}&subject=${encodeURIComponent(subject)}`,
