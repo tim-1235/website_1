@@ -3,57 +3,81 @@
     "polish": [
       {
         "id": "print-pl-1",
-        "src": "./site_photos/Prints/Polish/Jezus_PANEM_1a.png",
-        "title_pl": "Jezus Moim Panem",
-        "title_en": "Jesus Is My Lord",
-        "alt_pl": "Chrześcijański nadruk Jezus Moim Panem – projekt graficzny na koszulkę i bluzę",
-        "alt_en": "Christian print design Jesus Is My Lord – graphic design for apparel"
+        "src": "https://raw.githubusercontent.com/tim-1235/website_1/main/site_photos/Prints/Polish/Jezus_PANEM_1a.png",
+        "title_pl": "Jezus PANEM",
+        "title_en": "Jezus PANEM",
+        "alt_pl": "Chrześcijański nadruk Jezus PANEM – projekt graficzny na koszulkę i bluzę",
+        "alt_en": "Christian print design Jezus PANEM – graphic design for apparel"
       },
       {
         "id": "print-pl-2",
-        "src": "./site_photos/Prints/Polish/Jezus_mistrz_1a.png",
-        "title_pl": "Jezus Mistrz Nad Mistrzami",
-        "title_en": "Jesus Master of Masters",
-        "alt_pl": "Chrześcijański nadruk Jezus Mistrz Nad Mistrzami – projekt na odzież",
-        "alt_en": "Christian print design Jesus Master of Masters – garment graphic design"
+        "src": "https://raw.githubusercontent.com/tim-1235/website_1/main/site_photos/Prints/Polish/Jezus_mistrz_1a.png",
+        "title_pl": "Jezus mistrz",
+        "title_en": "Jezus mistrz",
+        "alt_pl": "Chrześcijański nadruk Jezus mistrz – projekt graficzny na koszulkę i bluzę",
+        "alt_en": "Christian print design Jezus mistrz – graphic design for apparel"
       },
       {
         "id": "print-pl-3",
-        "src": "./site_photos/Prints/Polish/Jezus_ratunkiem_1a4.png",
-        "title_pl": "Jezus Moim Ratunkiem",
-        "title_en": "Jesus Is My Salvation",
-        "alt_pl": "Chrześcijański nadruk Jezus Moim Ratunkiem – projekt na koszulkę i bluzę",
-        "alt_en": "Christian print design Jesus Is My Salvation – graphic design for t-shirts and hoodies"
+        "src": "https://raw.githubusercontent.com/tim-1235/website_1/main/site_photos/Prints/Polish/Jezus_ratunkiem_1a4.png",
+        "title_pl": "Jezus ratunkiem",
+        "title_en": "Jezus ratunkiem",
+        "alt_pl": "Chrześcijański nadruk Jezus ratunkiem – projekt graficzny na koszulkę i bluzę",
+        "alt_en": "Christian print design Jezus ratunkiem – graphic design for apparel"
+      },
+      {
+        "id": "print-pl-4",
+        "src": "https://raw.githubusercontent.com/tim-1235/website_1/main/site_photos/Prints/Polish/crown15a4_KROL_1a.png",
+        "title_pl": "crown15a4 KROL",
+        "title_en": "crown15a4 KROL",
+        "alt_pl": "Chrześcijański nadruk crown15a4 KROL – projekt graficzny na koszulkę i bluzę",
+        "alt_en": "Christian print design crown15a4 KROL – graphic design for apparel"
+      },
+      {
+        "id": "print-pl-5",
+        "src": "https://raw.githubusercontent.com/tim-1235/website_1/main/site_photos/Prints/Polish/crown15a4_PRAWDA_1a.png",
+        "title_pl": "crown15a4 PRAWDA",
+        "title_en": "crown15a4 PRAWDA",
+        "alt_pl": "Chrześcijański nadruk crown15a4 PRAWDA – projekt graficzny na koszulkę i bluzę",
+        "alt_en": "Christian print design crown15a4 PRAWDA – graphic design for apparel"
+      },
+      {
+        "id": "print-pl-6",
+        "src": "https://raw.githubusercontent.com/tim-1235/website_1/main/site_photos/Prints/Polish/crown15a4_swiatlo_1a.png",
+        "title_pl": "crown15a4 swiatlo",
+        "title_en": "crown15a4 swiatlo",
+        "alt_pl": "Chrześcijański nadruk crown15a4 swiatlo – projekt graficzny na koszulkę i bluzę",
+        "alt_en": "Christian print design crown15a4 swiatlo – graphic design for apparel"
       }
     ],
     "english": [
       {
         "id": "print-en-1",
-        "src": "./site_photos/Prints/English/Jesus_King_1a.png",
-        "title_pl": "Jesus Is King",
-        "title_en": "Jesus Is King",
-        "alt_pl": "Chrześcijański nadruk Jesus Is King – projekt graficzny na zamówienie",
-        "alt_en": "Christian print design Jesus Is King – custom graphic for hoodies and shirts"
+        "src": "https://raw.githubusercontent.com/tim-1235/website_1/main/site_photos/Prints/English/Jesus_King_1a.png",
+        "title_pl": "Jesus King",
+        "title_en": "Jesus King",
+        "alt_pl": "Chrześcijański nadruk Jesus King – projekt graficzny na odzież",
+        "alt_en": "Christian print design Jesus King – custom apparel graphic"
       },
       {
         "id": "print-en-2",
-        "src": "./site_photos/Prints/English/Jesus_saves_1a.png",
-        "title_pl": "Jesus Saves",
-        "title_en": "Jesus Saves",
-        "alt_pl": "Chrześcijański nadruk Jesus Saves – projekt na odzież",
-        "alt_en": "Christian print design Jesus Saves – apparel graphic design"
+        "src": "https://raw.githubusercontent.com/tim-1235/website_1/main/site_photos/Prints/English/Jesus_saves_1a.png",
+        "title_pl": "Jesus saves",
+        "title_en": "Jesus saves",
+        "alt_pl": "Chrześcijański nadruk Jesus saves – projekt graficzny na odzież",
+        "alt_en": "Christian print design Jesus saves – custom apparel graphic"
       },
       {
         "id": "print-en-3",
-        "src": "./site_photos/Prints/English/Jesus_won_1a2.png",
-        "title_pl": "Jesus Won",
-        "title_en": "Jesus Won",
-        "alt_pl": "Chrześcijański nadruk Jesus Won – projekt graficzny na bluzę lub koszulkę",
-        "alt_en": "Christian print design Jesus Won – graphic design for Christian apparel"
+        "src": "https://raw.githubusercontent.com/tim-1235/website_1/main/site_photos/Prints/English/Jesus_won_1a2.png",
+        "title_pl": "Jesus won",
+        "title_en": "Jesus won",
+        "alt_pl": "Chrześcijański nadruk Jesus won – projekt graficzny na odzież",
+        "alt_en": "Christian print design Jesus won – custom apparel graphic"
       },
       {
         "id": "print-en-4",
-        "src": "./site_photos/Prints/English/crown15a4_ALL_1a.png",
+        "src": "https://raw.githubusercontent.com/tim-1235/website_1/main/site_photos/Prints/English/crown15a4_ALL_1a.png",
         "title_pl": "crown15a4 ALL",
         "title_en": "crown15a4 ALL",
         "alt_pl": "Chrześcijański nadruk crown15a4 ALL – projekt graficzny na odzież",
@@ -61,7 +85,7 @@
       },
       {
         "id": "print-en-5",
-        "src": "./site_photos/Prints/English/crown15a4_EVERYTHING_1a.png",
+        "src": "https://raw.githubusercontent.com/tim-1235/website_1/main/site_photos/Prints/English/crown15a4_EVERYTHING_1a.png",
         "title_pl": "crown15a4 EVERYTHING",
         "title_en": "crown15a4 EVERYTHING",
         "alt_pl": "Chrześcijański nadruk crown15a4 EVERYTHING – projekt graficzny na odzież",
@@ -69,31 +93,31 @@
       },
       {
         "id": "print-en-6",
-        "src": "./site_photos/Prints/English/crown15a4_LIGHT_1a.png",
+        "src": "https://raw.githubusercontent.com/tim-1235/website_1/main/site_photos/Prints/English/crown15a4_LIGHT_1a.png",
         "title_pl": "crown15a4 LIGHT",
         "title_en": "crown15a4 LIGHT",
         "alt_pl": "Chrześcijański nadruk crown15a4 LIGHT – projekt graficzny na odzież",
         "alt_en": "Christian print design crown15a4 LIGHT – custom apparel graphic"
       },
       {
-        "id": "print-en-4",
-        "src": "./site_photos/Prints/English/graffiti_1b26_LIGHT_1a.png",
+        "id": "print-en-7",
+        "src": "https://raw.githubusercontent.com/tim-1235/website_1/main/site_photos/Prints/English/graffiti_1b26_LIGHT_1a.png",
         "title_pl": "graffiti 1b26 LIGHT",
         "title_en": "graffiti 1b26 LIGHT",
         "alt_pl": "Chrześcijański nadruk graffiti 1b26 LIGHT – projekt graficzny na odzież",
         "alt_en": "Christian print design graffiti 1b26 LIGHT – custom apparel graphic"
       },
       {
-        "id": "print-en-5",
-        "src": "./site_photos/Prints/English/graffiti_1b26_all_1a.png",
+        "id": "print-en-8",
+        "src": "https://raw.githubusercontent.com/tim-1235/website_1/main/site_photos/Prints/English/graffiti_1b26_all_1a.png",
         "title_pl": "graffiti 1b26 all",
         "title_en": "graffiti 1b26 all",
         "alt_pl": "Chrześcijański nadruk graffiti 1b26 all – projekt graficzny na odzież",
         "alt_en": "Christian print design graffiti 1b26 all – custom apparel graphic"
       },
       {
-        "id": "print-en-6",
-        "src": "./site_photos/Prints/English/graffiti_1b26_everything_1a.png",
+        "id": "print-en-9",
+        "src": "https://raw.githubusercontent.com/tim-1235/website_1/main/site_photos/Prints/English/graffiti_1b26_everything_1a.png",
         "title_pl": "graffiti 1b26 everything",
         "title_en": "graffiti 1b26 everything",
         "alt_pl": "Chrześcijański nadruk graffiti 1b26 everything – projekt graficzny na odzież",
@@ -104,27 +128,27 @@
   "past_work": [
     {
       "id": "work-1",
-      "src": "./site_photos/Past Work/20250817_101405.jpg",
-      "title_pl": "Beżowa bluza – I Put My Faith In Jesus",
-      "title_en": "Beige hoodie – I Put My Faith In Jesus",
-      "alt_pl": "Beżowa bluza z nadrukiem I Put My Faith In Jesus z motywem róży – realizacja Tymofii Pryimak",
-      "alt_en": "Beige hoodie with I Put My Faith In Jesus rose print – project by Tymofii Pryimak"
+      "src": "https://raw.githubusercontent.com/tim-1235/website_1/main/site_photos/Past Work/20250817_101405.jpg",
+      "title_pl": "Realizacja 1",
+      "title_en": "Work 1",
+      "alt_pl": "Zdjęcie chrześcijańskiego nadruku na odzieży – realizacja Realizacja 1 Tymofii Pryimak",
+      "alt_en": "Photo of Christian print on apparel – project 1 by Tymofii Pryimak"
     },
     {
       "id": "work-2",
-      "src": "./site_photos/Past Work/20250817_101822.jpg",
-      "title_pl": "Fioletowa bluza – Glory Of God",
-      "title_en": "Purple hoodie – Glory Of God",
-      "alt_pl": "Fioletowa bluza z nadrukiem Glory Of God z gołębiem – realizacja Tymofii Pryimak",
-      "alt_en": "Purple hoodie with Glory Of God dove print – project by Tymofii Pryimak"
+      "src": "https://raw.githubusercontent.com/tim-1235/website_1/main/site_photos/Past Work/20250817_101822.jpg",
+      "title_pl": "Realizacja 2",
+      "title_en": "Work 2",
+      "alt_pl": "Zdjęcie chrześcijańskiego nadruku na odzieży – realizacja Realizacja 2 Tymofii Pryimak",
+      "alt_en": "Photo of Christian print on apparel – project 2 by Tymofii Pryimak"
     },
     {
       "id": "work-3",
-      "src": "./site_photos/Past Work/20250817_102214.jpg",
-      "title_pl": "Niebieska bluza – Living For Jesus",
-      "title_en": "Blue hoodie – Living For Jesus",
-      "alt_pl": "Niebieska bluza z nadrukiem Living For Jesus Mt 6:33 – realizacja Tymofii Pryimak",
-      "alt_en": "Blue hoodie with Living For Jesus Mt 6:33 print – project by Tymofii Pryimak"
+      "src": "https://raw.githubusercontent.com/tim-1235/website_1/main/site_photos/Past Work/20250817_102214.jpg",
+      "title_pl": "Realizacja 3",
+      "title_en": "Work 3",
+      "alt_pl": "Zdjęcie chrześcijańskiego nadruku na odzieży – realizacja Realizacja 3 Tymofii Pryimak",
+      "alt_en": "Photo of Christian print on apparel – project 3 by Tymofii Pryimak"
     }
   ]
 }

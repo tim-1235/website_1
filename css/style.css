@@ -665,6 +665,18 @@ html {
             box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2);
         }
 
+        #langToggle .lang-flag {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 1.15rem;
+            height: 1.15rem;
+            font-size: 1.1rem;
+            line-height: 1;
+            border-radius: 2px;
+            box-shadow: none;
+        }
+
         #langToggle .lang-toggle-label {
             line-height: 1;
         }
