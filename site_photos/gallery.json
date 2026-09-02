@@ -50,6 +50,30 @@
         "title_en": "Jesus Won",
         "alt_pl": "Chrześcijański nadruk Jesus Won – projekt graficzny na bluzę lub koszulkę",
         "alt_en": "Christian print design Jesus Won – graphic design for Christian apparel"
+      },
+      {
+        "id": "print-en-4",
+        "src": "./site_photos/Prints/English/graffiti_1b26_LIGHT_1a.png",
+        "title_pl": "graffiti 1b26 LIGHT",
+        "title_en": "graffiti 1b26 LIGHT",
+        "alt_pl": "Chrześcijański nadruk graffiti 1b26 LIGHT – projekt graficzny na odzież",
+        "alt_en": "Christian print design graffiti 1b26 LIGHT – custom apparel graphic"
+      },
+      {
+        "id": "print-en-5",
+        "src": "./site_photos/Prints/English/graffiti_1b26_all_1a.png",
+        "title_pl": "graffiti 1b26 all",
+        "title_en": "graffiti 1b26 all",
+        "alt_pl": "Chrześcijański nadruk graffiti 1b26 all – projekt graficzny na odzież",
+        "alt_en": "Christian print design graffiti 1b26 all – custom apparel graphic"
+      },
+      {
+        "id": "print-en-6",
+        "src": "./site_photos/Prints/English/graffiti_1b26_everything_1a.png",
+        "title_pl": "graffiti 1b26 everything",
+        "title_en": "graffiti 1b26 everything",
+        "alt_pl": "Chrześcijański nadruk graffiti 1b26 everything – projekt graficzny na odzież",
+        "alt_en": "Christian print design graffiti 1b26 everything – custom apparel graphic"
       }
     ]
   },
