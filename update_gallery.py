@@ -56,7 +56,12 @@ def scan_folder(folder_path):
     if not os.path.exists(folder_path):
         return []
     valid_exts = {'.png', '.jpg', '.jpeg', '.webp', '.avif', '.svg'}
-    files = [f for f in sorted(os.listdir(folder_path)) if os.path.splitext(f)[1].lower() in valid_exts]
+    files = [
+        f for f in sorted(
+            os.listdir(folder_path),
+            key=lambda x: int(os.path.splitext(x)[0]) if os.path.splitext(x)[0].isdigit() else x
+        ) if os.path.splitext(f)[1].lower() in valid_exts
+    ]
     return files
 
 

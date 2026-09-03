@@ -3,82 +3,82 @@
     "polish": [
       {
         "id": "print-pl-1",
-        "src": "./site_photos/Prints/Polish/Jezus_PANEM_1a.png",
+        "src": "./site_photos/Prints/Polish/1.png",
         "title_pl": "Wzór 1",
         "title_en": "Print 1",
-        "text_content": "Jezus PANEM",
+        "text_content": "1",
         "alt_pl": "Chrześcijański nadruk Wzór 1 – projekt graficzny na koszulkę i bluzę",
         "alt_en": "Christian print design Print 1 – graphic design for apparel"
       },
       {
         "id": "print-pl-2",
-        "src": "./site_photos/Prints/Polish/Jezus_mistrz_1a.png",
+        "src": "./site_photos/Prints/Polish/2.png",
         "title_pl": "Wzór 2",
         "title_en": "Print 2",
-        "text_content": "Jezus mistrz",
+        "text_content": "2",
         "alt_pl": "Chrześcijański nadruk Wzór 2 – projekt graficzny na koszulkę i bluzę",
         "alt_en": "Christian print design Print 2 – graphic design for apparel"
       },
       {
         "id": "print-pl-3",
-        "src": "./site_photos/Prints/Polish/Jezus_ratunkiem_1a4.png",
+        "src": "./site_photos/Prints/Polish/3.png",
         "title_pl": "Wzór 3",
         "title_en": "Print 3",
-        "text_content": "Jezus ratunkiem",
+        "text_content": "3",
         "alt_pl": "Chrześcijański nadruk Wzór 3 – projekt graficzny na koszulkę i bluzę",
         "alt_en": "Christian print design Print 3 – graphic design for apparel"
       },
       {
         "id": "print-pl-4",
-        "src": "./site_photos/Prints/Polish/crown15a4_KROL_1a.png",
+        "src": "./site_photos/Prints/Polish/4.png",
         "title_pl": "Wzór 4",
         "title_en": "Print 4",
-        "text_content": "crown15a4 KROL",
+        "text_content": "4",
         "alt_pl": "Chrześcijański nadruk Wzór 4 – projekt graficzny na koszulkę i bluzę",
         "alt_en": "Christian print design Print 4 – graphic design for apparel"
       },
       {
         "id": "print-pl-5",
-        "src": "./site_photos/Prints/Polish/crown15a4_PRAWDA_1a.png",
+        "src": "./site_photos/Prints/Polish/5.png",
         "title_pl": "Wzór 5",
         "title_en": "Print 5",
-        "text_content": "crown15a4 PRAWDA",
+        "text_content": "5",
         "alt_pl": "Chrześcijański nadruk Wzór 5 – projekt graficzny na koszulkę i bluzę",
         "alt_en": "Christian print design Print 5 – graphic design for apparel"
       },
       {
         "id": "print-pl-6",
-        "src": "./site_photos/Prints/Polish/crown15a4_swiatlo_1a.png",
+        "src": "./site_photos/Prints/Polish/6.png",
         "title_pl": "Wzór 6",
         "title_en": "Print 6",
-        "text_content": "crown15a4 swiatlo",
+        "text_content": "6",
         "alt_pl": "Chrześcijański nadruk Wzór 6 – projekt graficzny na koszulkę i bluzę",
         "alt_en": "Christian print design Print 6 – graphic design for apparel"
       },
       {
         "id": "print-pl-7",
-        "src": "./site_photos/Prints/Polish/pl_LIFE_a2.png",
+        "src": "./site_photos/Prints/Polish/7.png",
         "title_pl": "Wzór 7",
         "title_en": "Print 7",
-        "text_content": "pl LIFE a2",
+        "text_content": "7",
         "alt_pl": "Chrześcijański nadruk Wzór 7 – projekt graficzny na koszulkę i bluzę",
         "alt_en": "Christian print design Print 7 – graphic design for apparel"
       },
       {
         "id": "print-pl-8",
-        "src": "./site_photos/Prints/Polish/pl_lato_2026_a3.png",
+        "src": "./site_photos/Prints/Polish/8.png",
         "title_pl": "Wzór 8",
         "title_en": "Print 8",
-        "text_content": "pl lato 2026 a3",
+        "text_content": "8",
         "alt_pl": "Chrześcijański nadruk Wzór 8 – projekt graficzny na koszulkę i bluzę",
         "alt_en": "Christian print design Print 8 – graphic design for apparel"
       },
       {
         "id": "print-pl-9",
-        "src": "./site_photos/Prints/Polish/pl_lato_2026_c7.png",
+        "src": "./site_photos/Prints/Polish/9.png",
         "title_pl": "Wzór 9",
         "title_en": "Print 9",
-        "text_content": "pl lato 2026 c7",
+        "text_content": "9",
         "alt_pl": "Chrześcijański nadruk Wzór 9 – projekt graficzny na koszulkę i bluzę",
         "alt_en": "Christian print design Print 9 – graphic design for apparel"
       }
@@ -86,109 +86,109 @@
     "english": [
       {
         "id": "print-en-1",
-        "src": "./site_photos/Prints/English/Jesus_King_1a.png",
+        "src": "./site_photos/Prints/English/10.png",
         "title_pl": "Wzór 10",
         "title_en": "Print 10",
-        "text_content": "Jesus King",
+        "text_content": "10",
         "alt_pl": "Chrześcijański nadruk Wzór 10 – projekt graficzny na odzież",
         "alt_en": "Christian print design Print 10 – custom apparel graphic"
       },
       {
         "id": "print-en-2",
-        "src": "./site_photos/Prints/English/Jesus_saves_1a.png",
+        "src": "./site_photos/Prints/English/11.png",
         "title_pl": "Wzór 11",
         "title_en": "Print 11",
-        "text_content": "Jesus saves",
+        "text_content": "11",
         "alt_pl": "Chrześcijański nadruk Wzór 11 – projekt graficzny na odzież",
         "alt_en": "Christian print design Print 11 – custom apparel graphic"
       },
       {
         "id": "print-en-3",
-        "src": "./site_photos/Prints/English/Jesus_won_1a2.png",
+        "src": "./site_photos/Prints/English/12.png",
         "title_pl": "Wzór 12",
         "title_en": "Print 12",
-        "text_content": "Jesus won",
+        "text_content": "12",
         "alt_pl": "Chrześcijański nadruk Wzór 12 – projekt graficzny na odzież",
         "alt_en": "Christian print design Print 12 – custom apparel graphic"
       },
       {
         "id": "print-en-4",
-        "src": "./site_photos/Prints/English/crown15a4_ALL_1a.png",
+        "src": "./site_photos/Prints/English/13.png",
         "title_pl": "Wzór 13",
         "title_en": "Print 13",
-        "text_content": "crown15a4 ALL",
+        "text_content": "13",
         "alt_pl": "Chrześcijański nadruk Wzór 13 – projekt graficzny na odzież",
         "alt_en": "Christian print design Print 13 – custom apparel graphic"
       },
       {
         "id": "print-en-5",
-        "src": "./site_photos/Prints/English/crown15a4_EVERYTHING_1a.png",
+        "src": "./site_photos/Prints/English/14.png",
         "title_pl": "Wzór 14",
         "title_en": "Print 14",
-        "text_content": "crown15a4 EVERYTHING",
+        "text_content": "14",
         "alt_pl": "Chrześcijański nadruk Wzór 14 – projekt graficzny na odzież",
         "alt_en": "Christian print design Print 14 – custom apparel graphic"
       },
       {
         "id": "print-en-6",
-        "src": "./site_photos/Prints/English/crown15a4_LIGHT_1a.png",
+        "src": "./site_photos/Prints/English/15.png",
         "title_pl": "Wzór 15",
         "title_en": "Print 15",
-        "text_content": "crown15a4 LIGHT",
+        "text_content": "15",
         "alt_pl": "Chrześcijański nadruk Wzór 15 – projekt graficzny na odzież",
         "alt_en": "Christian print design Print 15 – custom apparel graphic"
       },
       {
         "id": "print-en-7",
-        "src": "./site_photos/Prints/English/en_LIFE_a2.png",
+        "src": "./site_photos/Prints/English/16.png",
         "title_pl": "Wzór 16",
         "title_en": "Print 16",
-        "text_content": "en LIFE a2",
+        "text_content": "16",
         "alt_pl": "Chrześcijański nadruk Wzór 16 – projekt graficzny na odzież",
         "alt_en": "Christian print design Print 16 – custom apparel graphic"
       },
       {
         "id": "print-en-8",
-        "src": "./site_photos/Prints/English/en_lato_2026_a3.png",
+        "src": "./site_photos/Prints/English/17.png",
         "title_pl": "Wzór 17",
         "title_en": "Print 17",
-        "text_content": "en lato 2026 a3",
+        "text_content": "17",
         "alt_pl": "Chrześcijański nadruk Wzór 17 – projekt graficzny na odzież",
         "alt_en": "Christian print design Print 17 – custom apparel graphic"
       },
       {
         "id": "print-en-9",
-        "src": "./site_photos/Prints/English/en_lato_2026_c7.png",
+        "src": "./site_photos/Prints/English/18.png",
         "title_pl": "Wzór 18",
         "title_en": "Print 18",
-        "text_content": "en lato 2026 c7",
+        "text_content": "18",
         "alt_pl": "Chrześcijański nadruk Wzór 18 – projekt graficzny na odzież",
         "alt_en": "Christian print design Print 18 – custom apparel graphic"
       },
       {
         "id": "print-en-10",
-        "src": "./site_photos/Prints/English/graffiti_1b26_LIGHT_1a.png",
+        "src": "./site_photos/Prints/English/19.png",
         "title_pl": "Wzór 19",
         "title_en": "Print 19",
-        "text_content": "graffiti 1b26 LIGHT",
+        "text_content": "19",
         "alt_pl": "Chrześcijański nadruk Wzór 19 – projekt graficzny na odzież",
         "alt_en": "Christian print design Print 19 – custom apparel graphic"
       },
       {
         "id": "print-en-11",
-        "src": "./site_photos/Prints/English/graffiti_1b26_all_1a.png",
+        "src": "./site_photos/Prints/English/20.png",
         "title_pl": "Wzór 20",
         "title_en": "Print 20",
-        "text_content": "graffiti 1b26 all",
+        "text_content": "20",
         "alt_pl": "Chrześcijański nadruk Wzór 20 – projekt graficzny na odzież",
         "alt_en": "Christian print design Print 20 – custom apparel graphic"
       },
       {
         "id": "print-en-12",
-        "src": "./site_photos/Prints/English/graffiti_1b26_everything_1a.png",
+        "src": "./site_photos/Prints/English/21.png",
         "title_pl": "Wzór 21",
         "title_en": "Print 21",
-        "text_content": "graffiti 1b26 everything",
+        "text_content": "21",
         "alt_pl": "Chrześcijański nadruk Wzór 21 – projekt graficzny na odzież",
         "alt_en": "Christian print design Print 21 – custom apparel graphic"
       }
