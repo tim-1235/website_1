@@ -95,8 +95,6 @@ document.addEventListener("DOMContentLoaded", () => {
         'filter-all': 'All',
         'filter-polish': 'Polish',
         'filter-english': 'English',
-        'search-placeholder': 'Search by text on design...',
-        'search-placeholder-pl': 'Szukaj po tekście na projekcie...',
         'sort-label': 'Sort:',
         'sort-newest': 'Newest',
         'sort-oldest': 'Oldest',
@@ -201,12 +199,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         renderLanguageToggle(lang);
         updateThemeToggleText();
-
-        // Update search placeholder
-        const searchInput = document.getElementById('printSearch');
-        if (searchInput) {
-            searchInput.placeholder = lang === 'en' ? 'Search by text in design...' : 'Szukaj po tekście w projekcie...';
-        }
     };
 
     applyLanguage(currentLang);
@@ -438,12 +430,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Store-like navigation functionality
             const filterButtons = document.querySelectorAll('.filter-btn');
-            const searchInput = document.getElementById('printSearch');
-            const searchBtn = document.getElementById('searchBtn');
             const sortSelect = document.getElementById('sortSelect');
 
             let currentFilter = 'all';
-            let currentSearch = '';
             let currentSort = 'newest';
 
             const filterAndSortPrints = () => {
@@ -452,24 +441,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Apply category filter
                 if (currentFilter !== 'all') {
                     filteredPrints = filteredPrints.filter(item => item.category === currentFilter);
-                }
-
-                // Apply search filter
-                if (currentSearch) {
-                    const searchLower = currentSearch.toLowerCase();
-                    console.log('Searching for:', searchLower);
-                    filteredPrints = filteredPrints.filter(item => {
-                        const titlePl = (item.title_pl || '').toLowerCase();
-                        const titleEn = (item.title_en || '').toLowerCase();
-                        const textContent = (item.text_content || '').toLowerCase();
-                        console.log('Item:', item.title_pl, 'text_content:', textContent);
-                        // Search in all text fields, prioritize exact matches in text_content
-                        const hasTitleMatch = titlePl.includes(searchLower) || titleEn.includes(searchLower);
-                        const hasTextContentMatch = textContent.includes(searchLower);
-                        console.log('Matches:', hasTitleMatch, hasTextContentMatch);
-                        return hasTitleMatch || hasTextContentMatch;
-                    });
-                    console.log('Filtered results:', filteredPrints.length);
                 }
 
                 // Apply sorting
@@ -523,22 +494,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     filterAndSortPrints();
                 });
             });
-
-            // Search functionality
-            if (searchInput) {
-                searchInput.addEventListener('input', (e) => {
-                    currentSearch = e.target.value;
-                    console.log('Search term:', currentSearch);
-                    filterAndSortPrints();
-                });
-            }
-
-            if (searchBtn) {
-                searchBtn.addEventListener('click', () => {
-                    currentSearch = searchInput.value;
-                    filterAndSortPrints();
-                });
-            }
 
             // Sort functionality
             if (sortSelect) {
