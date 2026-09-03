@@ -62,10 +62,14 @@ def update_gallery():
     new_pl_list = []
     for idx, f in enumerate(pl_files, 1):
         src = build_image_src(os.path.join("site_photos", "Prints", "Polish", f))
+        title = format_title(f)
         if src in existing_prints_pl:
-            new_pl_list.append(existing_prints_pl[src])
+            item = existing_prints_pl[src]
+            # Update titles to reflect text written on the graphic
+            item["title_pl"] = title
+            item["title_en"] = title
+            new_pl_list.append(item)
         else:
-            title = format_title(f)
             new_pl_list.append({
                 "id": f"print-pl-{idx}",
                 "src": src,
@@ -80,10 +84,13 @@ def update_gallery():
     new_en_list = []
     for idx, f in enumerate(en_files, 1):
         src = build_image_src(os.path.join("site_photos", "Prints", "English", f))
+        title = format_title(f)
         if src in existing_prints_en:
-            new_en_list.append(existing_prints_en[src])
+            item = existing_prints_en[src]
+            item["title_pl"] = title
+            item["title_en"] = title
+            new_en_list.append(item)
         else:
-            title = format_title(f)
             new_en_list.append({
                 "id": f"print-en-{idx}",
                 "src": src,
@@ -98,10 +105,14 @@ def update_gallery():
     new_past_list = []
     for idx, f in enumerate(past_files, 1):
         src = build_image_src(os.path.join("site_photos", "Past Work", f))
+        title = f"Realizacja {idx}"
         if src in existing_past_work:
-            new_past_list.append(existing_past_work[src])
+            item = existing_past_work[src]
+            # Keep existing titles for past work but ensure ids exist
+            item.setdefault("title_pl", title)
+            item.setdefault("title_en", f"Work {idx}")
+            new_past_list.append(item)
         else:
-            title = f"Realizacja {idx}"
             new_past_list.append({
                 "id": f"work-{idx}",
                 "src": src,

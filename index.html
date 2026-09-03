@@ -97,8 +97,17 @@
     <!-- Wyodrębnione Style CSS -->
     <link rel="stylesheet" href="./css/style.css">
 
-    <!-- Favicon -->
+    <!-- Favicon & site icons (improves visibility in Google / OS) -->
+    <!-- Standard favicon at site root (preferred by Google) -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <!-- SVG favicon (scalable, works on most modern browsers) -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <!-- Provide explicit sizes (fallback to the repo raw file if root isn't available) -->
     <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/tim-1235/website_1/main/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.ico">
+    <meta name="msapplication-TileImage" content="/favicon.ico">
+    <meta name="theme-color" content="#18191c">
 
     <!-- Wyodrębniona Logika JS -->
     <script src="./js/main.js" defer></script>
