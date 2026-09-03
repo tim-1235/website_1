@@ -97,9 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
         'filter-english': 'English',
         'sort-label': 'Sort:',
         'sort-newest': 'Newest',
-        'sort-oldest': 'Oldest',
-        'sort-name-asc': 'A-Z',
-        'sort-name-desc': 'Z-A'
+        'sort-oldest': 'Oldest'
     };
     const ariaTranslations = {
         'aria-changestyle': 'Change style',
@@ -450,34 +448,6 @@ document.addEventListener("DOMContentLoaded", () => {
                         break;
                     case 'oldest':
                         filteredPrints.reverse();
-                        break;
-                    case 'name-asc':
-                        filteredPrints.sort((a, b) => {
-                            // Prioritize text_content from OCR, fallback to titles
-                            const textA = (a.text_content || '').toLowerCase();
-                            const textB = (b.text_content || '').toLowerCase();
-                            if (textA && textB) {
-                                return textA.localeCompare(textB);
-                            }
-                            // Fallback to title-based sorting if text_content is missing
-                            const titleA = currentLang === 'en' ? (a.title_en || '') : (a.title_pl || '');
-                            const titleB = currentLang === 'en' ? (b.title_en || '') : (b.title_pl || '');
-                            return titleA.toLowerCase().localeCompare(titleB.toLowerCase());
-                        });
-                        break;
-                    case 'name-desc':
-                        filteredPrints.sort((a, b) => {
-                            // Prioritize text_content from OCR, fallback to titles
-                            const textA = (a.text_content || '').toLowerCase();
-                            const textB = (b.text_content || '').toLowerCase();
-                            if (textA && textB) {
-                                return textB.localeCompare(textA);
-                            }
-                            // Fallback to title-based sorting if text_content is missing
-                            const titleA = currentLang === 'en' ? (a.title_en || '') : (a.title_pl || '');
-                            const titleB = currentLang === 'en' ? (b.title_en || '') : (b.title_pl || '');
-                            return titleB.toLowerCase().localeCompare(titleA.toLowerCase());
-                        });
                         break;
                 }
 
