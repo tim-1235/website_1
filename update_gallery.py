@@ -1,7 +1,6 @@
 import os
 import json
 import re
-import easyocr
 
 GALLERY_JSON_PATH = os.path.join("site_photos", "gallery.json")
 GALLERY_REPO = os.getenv("GALLERY_REPO", "").strip()
@@ -57,7 +56,12 @@ def scan_folder(folder_path):
     if not os.path.exists(folder_path):
         return []
     valid_exts = {'.png', '.jpg', '.jpeg', '.webp', '.avif', '.svg'}
-    files = [f for f in sorted(os.listdir(folder_path)) if os.path.splitext(f)[1].lower() in valid_exts]
+    files = [
+        f for f in sorted(
+            os.listdir(folder_path),
+            key=lambda x: int(os.path.splitext(x)[0]) if os.path.splitext(x)[0].isdigit() else x
+        ) if os.path.splitext(f)[1].lower() in valid_exts
+    ]
     return files
 
 
@@ -92,61 +96,47 @@ def update_gallery():
     # 1. Polish Prints
     pl_files = scan_folder(os.path.join("site_photos", "Prints", "Polish"))
     new_pl_list = []
+    print_number = 1
     for idx, f in enumerate(pl_files, 1):
         src = build_image_src(os.path.join("site_photos", "Prints", "Polish", f))
-        title = format_title(f)
+        title_pl = f"Wzór {print_number}"
+        title_en = f"Print {print_number}"
         image_path = os.path.join("site_photos", "Prints", "Polish", f)
         
-        # Try OCR first, fallback to filename extraction
-        ocr_text = extract_text_from_image(image_path)
-        text_content = ocr_text if ocr_text else extract_text_from_filename(f)
+        text_content = extract_text_from_filename(f)
         
-        if src in existing_prints_pl:
-            item = existing_prints_pl[src]
-            # Update titles to reflect text written on the graphic
-            item["title_pl"] = title
-            item["title_en"] = title
-            item["text_content"] = text_content
-            new_pl_list.append(item)
-        else:
-            new_pl_list.append({
-                "id": f"print-pl-{idx}",
-                "src": src,
-                "title_pl": title,
-                "title_en": title,
-                "text_content": text_content,
-                "alt_pl": f"Chrześcijański nadruk {title} – projekt graficzny na koszulkę i bluzę",
-                "alt_en": f"Christian print design {title} – graphic design for apparel"
-            })
+        new_pl_list.append({
+            "id": f"print-pl-{idx}",
+            "src": src,
+            "title_pl": title_pl,
+            "title_en": title_en,
+            "text_content": text_content,
+            "alt_pl": f"Chrześcijański nadruk {title_pl} – projekt graficzny na koszulkę i bluzę",
+            "alt_en": f"Christian print design {title_en} – graphic design for apparel"
+        })
+        print_number += 1
 
     # 2. English Prints
     en_files = scan_folder(os.path.join("site_photos", "Prints", "English"))
     new_en_list = []
     for idx, f in enumerate(en_files, 1):
         src = build_image_src(os.path.join("site_photos", "Prints", "English", f))
-        title = format_title(f)
+        title_pl = f"Wzór {print_number}"
+        title_en = f"Print {print_number}"
         image_path = os.path.join("site_photos", "Prints", "English", f)
         
-        # Try OCR first, fallback to filename extraction
-        ocr_text = extract_text_from_image(image_path)
-        text_content = ocr_text if ocr_text else extract_text_from_filename(f)
+        text_content = extract_text_from_filename(f)
         
-        if src in existing_prints_en:
-            item = existing_prints_en[src]
-            item["title_pl"] = title
-            item["title_en"] = title
-            item["text_content"] = text_content
-            new_en_list.append(item)
-        else:
-            new_en_list.append({
-                "id": f"print-en-{idx}",
-                "src": src,
-                "title_pl": title,
-                "title_en": title,
-                "text_content": text_content,
-                "alt_pl": f"Chrześcijański nadruk {title} – projekt graficzny na odzież",
-                "alt_en": f"Christian print design {title} – custom apparel graphic"
-            })
+        new_en_list.append({
+            "id": f"print-en-{idx}",
+            "src": src,
+            "title_pl": title_pl,
+            "title_en": title_en,
+            "text_content": text_content,
+            "alt_pl": f"Chrześcijański nadruk {title_pl} – projekt graficzny na odzież",
+            "alt_en": f"Christian print design {title_en} – custom apparel graphic"
+        })
+        print_number += 1
 
     # 3. Past Work
     past_files = scan_folder(os.path.join("site_photos", "Past Work"))
