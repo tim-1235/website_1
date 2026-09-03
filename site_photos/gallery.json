@@ -77,14 +77,6 @@
     "english": [
       {
         "id": "print-en-1",
-        "src": "./site_photos/Prints/English/EN_lato_2026_c7.png",
-        "title_pl": "EN lato 2026 c7",
-        "title_en": "EN lato 2026 c7",
-        "alt_pl": "Chrześcijański nadruk EN lato 2026 c7 – projekt graficzny na odzież",
-        "alt_en": "Christian print design EN lato 2026 c7 – custom apparel graphic"
-      },
-      {
-        "id": "print-en-2",
         "src": "./site_photos/Prints/English/Jesus_King_1a.png",
         "title_pl": "Jesus King",
         "title_en": "Jesus King",
@@ -92,7 +84,7 @@
         "alt_en": "Christian print design Jesus King – custom apparel graphic"
       },
       {
-        "id": "print-en-3",
+        "id": "print-en-2",
         "src": "./site_photos/Prints/English/Jesus_saves_1a.png",
         "title_pl": "Jesus saves",
         "title_en": "Jesus saves",
@@ -100,7 +92,7 @@
         "alt_en": "Christian print design Jesus saves – custom apparel graphic"
       },
       {
-        "id": "print-en-4",
+        "id": "print-en-3",
         "src": "./site_photos/Prints/English/Jesus_won_1a2.png",
         "title_pl": "Jesus won",
         "title_en": "Jesus won",
@@ -108,7 +100,7 @@
         "alt_en": "Christian print design Jesus won – custom apparel graphic"
       },
       {
-        "id": "print-en-5",
+        "id": "print-en-4",
         "src": "./site_photos/Prints/English/crown15a4_ALL_1a.png",
         "title_pl": "crown15a4 ALL",
         "title_en": "crown15a4 ALL",
@@ -116,7 +108,7 @@
         "alt_en": "Christian print design crown15a4 ALL – custom apparel graphic"
       },
       {
-        "id": "print-en-6",
+        "id": "print-en-5",
         "src": "./site_photos/Prints/English/crown15a4_EVERYTHING_1a.png",
         "title_pl": "crown15a4 EVERYTHING",
         "title_en": "crown15a4 EVERYTHING",
@@ -124,7 +116,7 @@
         "alt_en": "Christian print design crown15a4 EVERYTHING – custom apparel graphic"
       },
       {
-        "id": "print-en-7",
+        "id": "print-en-6",
         "src": "./site_photos/Prints/English/crown15a4_LIGHT_1a.png",
         "title_pl": "crown15a4 LIGHT",
         "title_en": "crown15a4 LIGHT",
@@ -132,7 +124,7 @@
         "alt_en": "Christian print design crown15a4 LIGHT – custom apparel graphic"
       },
       {
-        "id": "print-en-8",
+        "id": "print-en-7",
         "src": "./site_photos/Prints/English/en_LIFE_a2.png",
         "title_pl": "en LIFE a2",
         "title_en": "en LIFE a2",
@@ -140,12 +132,20 @@
         "alt_en": "Christian print design en LIFE a2 – custom apparel graphic"
       },
       {
-        "id": "print-en-9",
+        "id": "print-en-8",
         "src": "./site_photos/Prints/English/en_lato_2026_a3.png",
         "title_pl": "en lato 2026 a3",
         "title_en": "en lato 2026 a3",
         "alt_pl": "Chrześcijański nadruk en lato 2026 a3 – projekt graficzny na odzież",
         "alt_en": "Christian print design en lato 2026 a3 – custom apparel graphic"
+      },
+      {
+        "id": "print-en-9",
+        "src": "./site_photos/Prints/English/en_lato_2026_c7.png",
+        "title_pl": "en lato 2026 c7",
+        "title_en": "en lato 2026 c7",
+        "alt_pl": "Chrześcijański nadruk en lato 2026 c7 – projekt graficzny na odzież",
+        "alt_en": "Christian print design en lato 2026 c7 – custom apparel graphic"
       },
       {
         "id": "print-en-10",
