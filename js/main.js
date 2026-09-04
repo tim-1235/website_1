@@ -7,26 +7,38 @@ document.addEventListener("DOMContentLoaded", () => {
     const safeGetItem = (key) => { try { return localStorage.getItem(key); } catch (e) { return null; } };
 
     // ZARZĄDZANIE TEMATEM (LIGHT / DARK)
+    // Light mode temporarily disabled — site is hard-locked to dark mode for now.
     const themeToggleBtn = document.getElementById('themeToggle');
-    let currentTheme = safeGetItem('theme') || 'dark';
+    const mobileThemeToggleBtn = document.getElementById('mobileThemeToggle');
+    let currentTheme = 'dark';
     rootHtml.setAttribute('data-theme', currentTheme);
 
     const updateThemeToggleText = () => {
         const isDark = rootHtml.getAttribute('data-theme') === 'dark';
-        if (currentLang === 'en') {
-            themeToggleBtn.innerHTML = isDark ? '☀️ Light' : '🌙 Dark';
-        } else {
-            themeToggleBtn.innerHTML = isDark ? '☀️ Jasny' : '🌙 Ciemny';
+        const desktopText = currentLang === 'en'
+            ? (isDark ? '☀️ Light' : '🌙 Dark')
+            : (isDark ? '☀️ Jasny' : '🌙 Ciemny');
+        const mobileText = currentLang === 'en'
+            ? (isDark ? '☀️ Light mode' : '🌙 Dark mode')
+            : (isDark ? '☀️ Jasny tryb' : '🌙 Ciemny tryb');
+
+        if (themeToggleBtn) themeToggleBtn.innerHTML = desktopText;
+        if (mobileThemeToggleBtn) {
+            const icon = mobileThemeToggleBtn.querySelector('.mobile-theme-icon');
+            const text = mobileThemeToggleBtn.querySelector('.mobile-theme-text');
+            if (icon) icon.textContent = isDark ? '☀️' : '🌙';
+            if (text) text.textContent = mobileText;
         }
     };
 
-    themeToggleBtn.addEventListener('click', () => {
-        const isDark = rootHtml.getAttribute('data-theme') === 'dark';
-        const newTheme = isDark ? 'light' : 'dark';
-        rootHtml.setAttribute('data-theme', newTheme);
-        safeSetItem('theme', newTheme);
-        updateThemeToggleText();
-    });
+    const toggleTheme = () => {
+        // Disabled for now — remove this early return to restore light/dark switching.
+        return;
+    };
+
+    if (themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
+    if (mobileThemeToggleBtn) mobileThemeToggleBtn.addEventListener('click', toggleTheme);
+
 
     // ZARZĄDZANIE JĘZYKIEM / LANGUAGE SWITCHER
     const langToggleBtn = document.getElementById('langToggle');
@@ -35,8 +47,11 @@ document.addEventListener("DOMContentLoaded", () => {
         'nav-prints': 'Prints',
         'nav-portfolio': 'Past Work',
         'nav-contact': 'Contact',
-        'style-text': 'Style',
+        'style-text': 'Theme',
+        'style-label': 'Theme:',
         'style-drawing': '✏️ Drawing',
+        'appearance-label': 'Appearance:',
+        'theme-light-label': '☀️ Light mode',
         'hero-subtitle': 'Christian graphic designer – I design the print, you choose the garment',
         'hero-cta': 'Order Now →',
         'trust-design': 'Graphics designed by me',
@@ -83,9 +98,13 @@ document.addEventListener("DOMContentLoaded", () => {
         'footer-phone-label': 'Phone:',
         'footer-privacy': 'Privacy and Returns Policy',
         'footer-disclaimer': 'Tymofii Pryimak – independent graphic designer. I offer graphic design and DTF print ordering on customer-chosen garments. I am not affiliated with, sponsored by, or authorized by any clothing brand. All trademarks belong to their respective owners.',
-        'mail-title': 'Choose your email',
+        'mail-title': 'Write to me',
+        'mail-subtitle': 'Copy the email address or open your favorite mail app:',
+        'mail-copy': 'Copy email',
+        'mail-copied': 'Copied!',
+        'mail-or': 'or choose an app:',
         'mail-android': 'Mail App',
-        'mail-cancel': 'Cancel',
+        'mail-cancel': 'Close',
         'href-privacy': 'https://docs.google.com/document/d/e/2PACX-1vQUFHwPECwGUn5DRrVb6zGImlGCb1BEyJf8QDl-GDHms55NytOBdwRn5LBKRDEX5CFjAVNxjKmqEfRg/pub',
         'cookie-title': 'Cookies & Analytics',
         'cookie-text': 'This website uses cookies to analyze traffic and optimize user experience via Google Analytics. By using this website, you agree to their use.',
@@ -97,11 +116,18 @@ document.addEventListener("DOMContentLoaded", () => {
         'filter-english': 'English',
         'sort-label': 'Sort:',
         'sort-newest': 'Newest',
-        'sort-oldest': 'Oldest'
+        'sort-oldest': 'Oldest',
+        'lightbox-order': 'Order this print →',
+        'lightbox-title-fallback': 'Print'
     };
     const ariaTranslations = {
         'aria-changestyle': 'Change style',
         'aria-theme': 'Toggle light/dark mode',
+        'aria-menu-open': 'Open menu',
+        'aria-menu-close': 'Close menu',
+        'aria-lightbox-close': 'Close enlarged photo',
+        'aria-lightbox-prev': 'Previous photo',
+        'aria-lightbox-next': 'Next photo',
         'aria-scroll-top': 'Scroll to top',
         'aria-cookie-aside': 'Cookie consent management',
         'aria-cookie-close': 'Close notification',
@@ -191,15 +217,30 @@ document.addEventListener("DOMContentLoaded", () => {
             if (title) img.setAttribute('title', title);
         });
 
+        document.querySelectorAll('.portfolio-card').forEach(card => {
+            const name = card.querySelector('.portfolio-card-name');
+            const tag = card.querySelector('.portfolio-card-tag');
+            const title = lang === 'en' ? card.getAttribute('data-title-en') : card.getAttribute('data-title-pl');
+            if (name && title) name.textContent = title;
+            if (tag) {
+                const category = card.dataset.category;
+                tag.textContent = category === 'english'
+                    ? (lang === 'en' ? 'English' : 'Angielski')
+                    : category === 'polish'
+                        ? (lang === 'en' ? 'Polish' : 'Polski')
+                        : (lang === 'en' ? 'Work' : 'Realizacja');
+            }
+        });
+
         document.title = pageMeta.title[lang] || pageMeta.title.pl;
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) metaDesc.setAttribute('content', pageMeta.description[lang] || pageMeta.description.pl);
 
         renderLanguageToggle(lang);
         updateThemeToggleText();
+        if (typeof updateMailLinks === 'function') updateMailLinks(pendingMailSubject || getDefaultSubject());
+        if (typeof updateLightboxCaption === 'function') updateLightboxCaption();
     };
-
-    applyLanguage(currentLang);
 
     langToggleBtn.addEventListener('click', () => {
         const newLang = currentLang === 'en' ? 'pl' : 'en';
@@ -210,61 +251,162 @@ document.addEventListener("DOMContentLoaded", () => {
     // ZARZĄDZANIE STYLEM
     const styleSwitcherToggle = document.getElementById('styleSwitcherToggle');
     const styleSwitcherMenu = document.getElementById('styleSwitcherMenu');
-    const styleBtns = document.querySelectorAll('.style-btn');
+    const styleBtns = document.querySelectorAll('[data-set-style]');
 
     const currentStyle = safeGetItem('site-style') || 'minimalist';
     rootHtml.setAttribute('data-style', currentStyle);
 
-    styleSwitcherToggle.addEventListener('click', () => {
-        styleSwitcherMenu.classList.toggle('active');
-    });
+    const updateStyleButtons = (style) => {
+        styleBtns.forEach(btn => btn.classList.toggle('active', btn.dataset.setStyle === style));
+    };
+
+    const setSiteStyle = (style) => {
+        rootHtml.setAttribute('data-style', style);
+        safeSetItem('site-style', style);
+        updateStyleButtons(style);
+        if (styleSwitcherMenu) styleSwitcherMenu.classList.remove('active');
+    };
+
+    if (styleSwitcherToggle && styleSwitcherMenu) {
+        styleSwitcherToggle.addEventListener('click', () => {
+            styleSwitcherMenu.classList.toggle('active');
+        });
+    }
 
     document.addEventListener('click', (e) => {
-        if (!e.target.closest('.style-switcher')) {
+        if (styleSwitcherMenu && !e.target.closest('.style-switcher')) {
             styleSwitcherMenu.classList.remove('active');
         }
     });
 
     styleBtns.forEach(btn => {
-        if (btn.dataset.setStyle === currentStyle) btn.classList.add('active');
         btn.addEventListener('click', () => {
-            const newStyle = btn.dataset.setStyle;
-            rootHtml.setAttribute('data-style', newStyle);
-            safeSetItem('site-style', newStyle);
-            styleBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            styleSwitcherMenu.classList.remove('active');
+            setSiteStyle(btn.dataset.setStyle);
         });
+    });
+    updateStyleButtons(currentStyle);
+
+    // MOBILNE MENU
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const mobileNavDrawer = document.getElementById('mobileNavDrawer');
+    const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+    const mobileNavClose = document.getElementById('mobileNavClose');
+
+    const setMobileMenuOpen = (isOpen) => {
+        if (!mobileMenuToggle || !mobileNavDrawer || !mobileNavOverlay) return;
+        mobileMenuToggle.classList.toggle('active', isOpen);
+        mobileMenuToggle.setAttribute('aria-expanded', String(isOpen));
+        mobileNavDrawer.classList.toggle('active', isOpen);
+        mobileNavDrawer.setAttribute('aria-hidden', String(!isOpen));
+        mobileNavOverlay.classList.toggle('active', isOpen);
+        mobileNavOverlay.setAttribute('aria-hidden', String(!isOpen));
+        document.body.classList.toggle('mobile-menu-open', isOpen);
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+        } else if (!document.querySelector('.mail-modal.active') && !document.querySelector('.lightbox.active')) {
+            document.body.style.overflow = '';
+        }
+    };
+
+    if (mobileMenuToggle) mobileMenuToggle.addEventListener('click', () => setMobileMenuOpen(true));
+    if (mobileNavClose) mobileNavClose.addEventListener('click', () => setMobileMenuOpen(false));
+    if (mobileNavOverlay) mobileNavOverlay.addEventListener('click', () => setMobileMenuOpen(false));
+    document.querySelectorAll('.mobile-nav-link, .mobile-order-btn').forEach(link => {
+        link.addEventListener('click', () => setMobileMenuOpen(false));
     });
 
     // LINKI EMAIL
     const email = "tymofii.pryimak@gmail.com";
-    const subject = currentLang === 'en' ? 'Order' : 'Zamówienie';
-    const mailUrls = {
-        gmail: `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}`,
-        outlook: `https://outlook.live.com/mail/0/deeplink/compose?to=${email}&subject=${encodeURIComponent(subject)}`,
-        yahoo: `https://compose.mail.yahoo.com/?to=${email}&subject=${encodeURIComponent(subject)}`,
-        apple: `mailto:${email}?subject=${encodeURIComponent(subject)}`,
-        android: `mailto:${email}?subject=${encodeURIComponent(subject)}`
+    const mailModal = document.getElementById('mailModal');
+    const copyEmailBtn = document.getElementById('copyEmailBtn');
+    const copyEmailText = copyEmailBtn?.querySelector('.copy-btn-text');
+    let pendingMailSubject = '';
+
+    const getDefaultSubject = () => currentLang === 'en' ? 'Order' : 'Zamówienie';
+    const getPrintSubject = (title) => currentLang === 'en'
+        ? `Order: ${title}`
+        : `Zamówienie: ${title}`;
+
+    const updateMailLinks = (subject = getDefaultSubject()) => {
+        const encodedSubject = encodeURIComponent(subject);
+        const urls = {
+            gmail: `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodedSubject}`,
+            outlook: `https://outlook.live.com/mail/0/deeplink/compose?to=${email}&subject=${encodedSubject}`,
+            yahoo: `https://compose.mail.yahoo.com/?to=${email}&subject=${encodedSubject}`,
+            apple: `mailto:${email}?subject=${encodedSubject}`,
+            android: `mailto:${email}?subject=${encodedSubject}`
+        };
+
+        const setHref = (id, href) => {
+            const el = document.getElementById(id);
+            if (el) el.href = href;
+        };
+
+        setHref('btn-gmail', urls.gmail);
+        setHref('btn-outlook', urls.outlook);
+        setHref('btn-yahoo', urls.yahoo);
+        setHref('btn-apple', urls.apple);
+        setHref('btn-android', urls.android);
     };
 
-    const mailModal = document.getElementById('mailModal');
-    document.getElementById('btn-gmail').href = mailUrls.gmail;
-    document.getElementById('btn-outlook').href = mailUrls.outlook;
-    document.getElementById('btn-yahoo').href = mailUrls.yahoo;
-    document.getElementById('btn-apple').href = mailUrls.apple;
-    document.getElementById('btn-android').href = mailUrls.android;
+    const openMailModal = (subject = getDefaultSubject()) => {
+        pendingMailSubject = subject;
+        updateMailLinks(subject);
+        if (mailModal) {
+            mailModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    };
+
+    const closeMailModal = () => {
+        if (mailModal) mailModal.classList.remove('active');
+        pendingMailSubject = '';
+        if (!document.querySelector('.lightbox.active') && !document.querySelector('.mobile-nav-drawer.active')) {
+            document.body.style.overflow = '';
+        }
+    };
+
+    updateMailLinks();
 
     document.querySelectorAll('.js-email-link').forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
-            mailModal.classList.add('active');
+            openMailModal();
         });
     });
 
-    document.getElementById('mailClose').addEventListener('click', () => mailModal.classList.remove('active'));
-    mailModal.addEventListener('click', (e) => { if (e.target === mailModal) mailModal.classList.remove('active'); });
-    document.querySelectorAll('.mail-btn').forEach(btn => btn.addEventListener('click', () => mailModal.classList.remove('active')));
+    document.getElementById('mailClose')?.addEventListener('click', closeMailModal);
+    if (mailModal) {
+        mailModal.addEventListener('click', (e) => {
+            if (e.target === mailModal) closeMailModal();
+        });
+    }
+    document.querySelectorAll('.mail-btn').forEach(btn => btn.addEventListener('click', closeMailModal));
+
+    if (copyEmailBtn) {
+        copyEmailBtn.addEventListener('click', async () => {
+            const originalText = currentLang === 'en' ? translations['mail-copy'] : 'Kopiuj e-mail';
+            const copiedText = currentLang === 'en' ? translations['mail-copied'] : 'Skopiowano!';
+            try {
+                await navigator.clipboard.writeText(email);
+            } catch (e) {
+                const tempInput = document.createElement('input');
+                tempInput.value = email;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                document.execCommand('copy');
+                tempInput.remove();
+            }
+            if (copyEmailText) {
+                copyEmailText.textContent = copiedText;
+                copyEmailBtn.classList.add('copied');
+                window.setTimeout(() => {
+                    copyEmailText.textContent = originalText;
+                    copyEmailBtn.classList.remove('copied');
+                }, 1800);
+            }
+        });
+    }
 
     // SMOOTH SCROLL
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -291,6 +433,28 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+
+    // AKTYWNA SEKCJA W NAWIGACJI
+    const navSectionIds = ['o-mnie', 'dostepne-nadruki', 'portfolio', 'kontakt'];
+    const navSectionEls = navSectionIds
+        .map(id => document.getElementById(id))
+        .filter(Boolean);
+
+    const updateActiveNavigation = () => {
+        const navOffset = (document.querySelector('.top-nav')?.offsetHeight || 0) + 90;
+        let activeId = navSectionEls[0]?.id || '';
+
+        navSectionEls.forEach(section => {
+            if (section.getBoundingClientRect().top <= navOffset) {
+                activeId = section.id;
+            }
+        });
+
+        document.querySelectorAll('.nav-links a, .mobile-nav-link').forEach(link => {
+            const href = link.getAttribute('href') || '';
+            link.classList.toggle('active', href === `#${activeId}`);
+        });
+    };
 
     // ANIMACJE SCROLLA I PARALAKSA MYSZKI
     const headerContent = document.querySelector('.header-content');
@@ -323,11 +487,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 } else {
                     if (topBtn.classList.contains('visible')) topBtn.classList.remove('visible');
                 }
+                updateActiveNavigation();
                 scrollTicking = false;
             });
             scrollTicking = true;
         }
     }, { passive: true });
+    updateActiveNavigation();
 
     // INTERSECTION OBSERVER
     const observer = new IntersectionObserver((entries) => {
@@ -342,26 +508,127 @@ document.addEventListener("DOMContentLoaded", () => {
     // LIGHTBOX
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
-    
+    const lightboxClose = document.getElementById('lightboxClose');
+    const lightboxPrev = document.getElementById('lightboxPrev');
+    const lightboxNext = document.getElementById('lightboxNext');
+    const lightboxTitle = document.getElementById('lightboxTitle');
+    const lightboxCounter = document.getElementById('lightboxCounter');
+    const lightboxOrderBtn = document.getElementById('lightboxOrderBtn');
+    let lightboxItems = [];
+    let currentLightboxIndex = -1;
+    let touchStartX = 0;
+    let touchStartY = 0;
+
+    const refreshLightboxItems = (scope = document) => {
+        lightboxItems = Array.from(scope.querySelectorAll('.portfolio-card img'));
+    };
+
+    const getImageTitle = (img) => {
+        if (!img) return currentLang === 'en' ? 'Print' : 'Wzór';
+        return (currentLang === 'en'
+            ? img.getAttribute('data-title-en')
+            : img.getAttribute('data-title-pl')) || img.getAttribute('title') || (currentLang === 'en' ? 'Print' : 'Wzór');
+    };
+
+    function updateLightboxCaption() {
+        if (!lightbox || !lightbox.classList.contains('active')) return;
+        const activeImg = lightboxItems[currentLightboxIndex];
+        const title = getImageTitle(activeImg);
+        if (lightboxTitle) lightboxTitle.textContent = title;
+        if (lightboxCounter) lightboxCounter.textContent = lightboxItems.length > 1 ? `${currentLightboxIndex + 1} / ${lightboxItems.length}` : '';
+        if (lightboxOrderBtn) lightboxOrderBtn.textContent = currentLang === 'en' ? translations['lightbox-order'] : 'Zamów ten wzór →';
+    }
+
+    const showLightboxImage = (index) => {
+        if (!lightboxImg || lightboxItems.length === 0) return;
+        currentLightboxIndex = (index + lightboxItems.length) % lightboxItems.length;
+        const img = lightboxItems[currentLightboxIndex];
+        lightboxImg.src = img.src;
+        lightboxImg.alt = currentLang === 'en'
+            ? (img.getAttribute('data-alt-en') || img.alt)
+            : (img.getAttribute('data-alt-pl') || img.alt);
+        updateLightboxCaption();
+    };
+
+    const openLightbox = (img) => {
+        if (!lightbox || !img) return;
+        refreshLightboxItems(img.closest('.portfolio-grid') || document);
+        const index = Math.max(0, lightboxItems.indexOf(img));
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        showLightboxImage(index);
+    };
+
+    const closeLightbox = () => {
+        if (!lightbox) return;
+        lightbox.classList.remove('active');
+        if (!document.querySelector('.mail-modal.active') && !document.querySelector('.mobile-nav-drawer.active')) {
+            document.body.style.overflow = '';
+        }
+    };
+
     const bindLightboxListeners = () => {
-        document.querySelectorAll('.portfolio-card img').forEach(img => {
+        refreshLightboxItems();
+        lightboxItems.forEach(img => {
             if (!img._lightboxBound) {
                 img._lightboxBound = true;
-                img.addEventListener('click', () => {
-                    lightboxImg.src = img.src;
-                    lightbox.classList.add('active');
-                    document.body.style.overflow = 'hidden';
-                });
+                img.addEventListener('click', () => openLightbox(img));
             }
         });
     };
     bindLightboxListeners();
 
-    lightbox.addEventListener('click', (e) => {
-        if (e.target !== lightboxImg) {
-            lightbox.classList.remove('active');
-            document.body.style.overflow = '';
+    if (lightbox) {
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+        lightbox.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].clientX;
+            touchStartY = e.changedTouches[0].clientY;
+        }, { passive: true });
+        lightbox.addEventListener('touchend', (e) => {
+            const dx = e.changedTouches[0].clientX - touchStartX;
+            const dy = e.changedTouches[0].clientY - touchStartY;
+            if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
+                showLightboxImage(currentLightboxIndex + (dx < 0 ? 1 : -1));
+            }
+        }, { passive: true });
+    }
+
+    if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+    if (lightboxPrev) lightboxPrev.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showLightboxImage(currentLightboxIndex - 1);
+    });
+    if (lightboxNext) lightboxNext.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showLightboxImage(currentLightboxIndex + 1);
+    });
+    if (lightboxOrderBtn) {
+        lightboxOrderBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const title = getImageTitle(lightboxItems[currentLightboxIndex]);
+            closeLightbox();
+            openMailModal(getPrintSubject(title));
+        });
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            if (mailModal?.classList.contains('active')) {
+                closeMailModal();
+                return;
+            }
+            if (lightbox?.classList.contains('active')) {
+                closeLightbox();
+                return;
+            }
+            setMobileMenuOpen(false);
         }
+
+        if (!lightbox?.classList.contains('active')) return;
+        if (e.key === 'ArrowLeft') showLightboxImage(currentLightboxIndex - 1);
+        if (e.key === 'ArrowRight') showLightboxImage(currentLightboxIndex + 1);
     });
 
     // DYNAMICZNE ŁADOWANIE GALERII (site_photos/gallery.json)
@@ -380,9 +647,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 allPrints = allPrints.concat(data.prints.english.map(item => ({...item, category: 'english'})));
             }
             
-            console.log('Total prints loaded:', allPrints.length);
-            console.log('Sample print:', allPrints[0]);
-
             const renderGrid = (gridId, items) => {
                 const grid = document.getElementById(gridId);
                 if (!grid) return;
@@ -397,9 +661,16 @@ document.addEventListener("DOMContentLoaded", () => {
                     const altEn = item.alt_en || item.title_en || 'Christian graphic design';
                     const title = (currentLang === 'en' ? item.title_en : item.title_pl) || '';
                     const initialAlt = currentLang === 'en' ? altEn : altPl;
+                    const categoryLabel = item.category === 'english'
+                        ? (currentLang === 'en' ? 'English' : 'Angielski')
+                        : item.category === 'polish'
+                            ? (currentLang === 'en' ? 'Polish' : 'Polski')
+                            : (currentLang === 'en' ? 'Work' : 'Realizacja');
 
                     return `
-                        <div class="portfolio-card scroll-anim visible" data-category="${item.category || ''}">
+                        <div class="portfolio-card scroll-anim visible" data-category="${item.category || ''}"
+                            data-title-pl="${item.title_pl || ''}"
+                            data-title-en="${item.title_en || ''}">
                             <img decoding="async" loading="lazy"
                                 src="${item.src}"
                                 alt="${initialAlt}"
@@ -408,6 +679,10 @@ document.addEventListener("DOMContentLoaded", () => {
                                 data-alt-en="${altEn}"
                                 data-title-pl="${item.title_pl || ''}"
                                 data-title-en="${item.title_en || ''}">
+                            <div class="portfolio-card-title">
+                                <span class="portfolio-card-name">${title}</span>
+                                <span class="portfolio-card-tag">${categoryLabel}</span>
+                            </div>
                         </div>
                     `;
                 }).join('');
@@ -430,8 +705,21 @@ document.addEventListener("DOMContentLoaded", () => {
             const filterButtons = document.querySelectorAll('.filter-btn');
             const sortSelect = document.getElementById('sortSelect');
 
+            const updateFilterCounts = () => {
+                const counts = {
+                    all: allPrints.length,
+                    polish: allPrints.filter(item => item.category === 'polish').length,
+                    english: allPrints.filter(item => item.category === 'english').length
+                };
+                document.querySelectorAll('.filter-count').forEach(countEl => {
+                    const key = countEl.dataset.countFor;
+                    countEl.textContent = counts[key] ?? 0;
+                });
+            };
+
             let currentFilter = 'all';
             let currentSort = 'newest';
+            updateFilterCounts();
 
             const filterAndSortPrints = () => {
                 let filteredPrints = [...allPrints];
@@ -525,4 +813,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     });
+
+    applyLanguage(currentLang);
 });

@@ -116,6 +116,11 @@
 <body>
 
     <nav class="top-nav">
+        <div class="nav-brand-wrap">
+            <a href="#top" class="nav-brand" aria-label="Strona główna">
+                <img src="./site_photos/logo_button/logo.png" class="nav-logo" alt="Logo" aria-hidden="true">
+            </a>
+        </div>
         <div class="nav-links">
             <a href="#o-mnie" data-i18n="nav-about">O mnie</a>
             <a href="#dostepne-nadruki" data-i18n="nav-prints">Nadruki</a>
@@ -124,9 +129,9 @@
         </div>
         <div class="nav-actions">
             <div class="style-switcher">
-                <button id="styleSwitcherToggle" class="style-switcher-btn" aria-label="Zmień styl"
+                <button id="styleSwitcherToggle" class="style-switcher-btn" aria-label="Zmień motyw"
                     data-i18n-aria="aria-changestyle">
-                    <span>🎨</span> <span class="switcher-text" data-i18n="style-text">Styl</span>
+                    <span>🎨</span> <span class="switcher-text" data-i18n="style-text">Motyw</span>
                 </button>
                 <div id="styleSwitcherMenu" class="style-switcher-menu">
                     <button class="style-btn" data-set-style="minimalist">🌑 Minimal.</button>
@@ -137,14 +142,85 @@
             </div>
             <button id="themeToggle" aria-label="Przełącz tryb jasny/ciemny" data-i18n-aria="aria-theme">☀️ Jasny</button>
         </div>
-        <button id="langToggle" aria-label="Change language / Zmień język">
-            <svg class="lang-toggle-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 12" aria-hidden="true">
-                <rect width="20" height="6" fill="#fff"/>
-                <rect y="6" width="20" height="6" fill="#DC143C"/>
-            </svg>
-            <span class="lang-toggle-label">PL</span>
-        </button>
+        <div class="nav-right-controls">
+            <button id="langToggle" aria-label="Change language / Zmień język">
+                <svg class="lang-toggle-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 12" aria-hidden="true">
+                    <rect width="20" height="6" fill="#fff"/>
+                    <rect y="6" width="20" height="6" fill="#DC143C"/>
+                </svg>
+                <span class="lang-toggle-label">PL</span>
+            </button>
+            <button id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="Otwórz menu" aria-expanded="false" data-i18n-aria="aria-menu-open">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
     </nav>
+
+    <!-- MOBILNE MENU WYSUWANE (DRAWER) -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true"></div>
+    <div class="mobile-nav-drawer" id="mobileNavDrawer" role="dialog" aria-modal="true" aria-label="Menu nawigacyjne" aria-hidden="true">
+        <div class="mobile-nav-header">
+            <a href="#top" class="mobile-nav-logo" aria-label="Strona główna">
+                <img src="./site_photos/logo_button/logo.png" class="nav-logo" alt="Logo" aria-hidden="true">
+            </a>
+            <button class="mobile-nav-close" id="mobileNavClose" aria-label="Zamknij menu" data-i18n-aria="aria-menu-close">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="#o-mnie" class="mobile-nav-link">
+                <span class="mobile-link-icon">👤</span> <span class="mobile-link-text" data-i18n="nav-about">O mnie</span>
+            </a>
+            <a href="#dostepne-nadruki" class="mobile-nav-link">
+                <span class="mobile-link-icon">🎨</span> <span class="mobile-link-text" data-i18n="nav-prints">Nadruki</span>
+            </a>
+            <a href="#portfolio" class="mobile-nav-link">
+                <span class="mobile-link-icon">👕</span> <span class="mobile-link-text" data-i18n="nav-portfolio">Realizacje</span>
+            </a>
+            <a href="#kontakt" class="mobile-nav-link">
+                <span class="mobile-link-icon">✉️</span> <span class="mobile-link-text" data-i18n="nav-contact">Kontakt</span>
+            </a>
+        </div>
+
+        <div class="mobile-drawer-section">
+            <div class="mobile-section-label" data-i18n="style-label">Motyw:</div>
+            <div class="mobile-style-grid">
+                <button class="mobile-style-btn" data-set-style="minimalist">
+                    <span class="style-btn-icon">🌑</span>
+                    <span class="style-btn-name">Minimalist</span>
+                </button>
+                <button class="mobile-style-btn" data-set-style="drawing">
+                    <span class="style-btn-icon">✏️</span>
+                    <span class="style-btn-name" data-i18n="style-drawing">Rysunkowy</span>
+                </button>
+                <button class="mobile-style-btn" data-set-style="neon">
+                    <span class="style-btn-icon">⚡</span>
+                    <span class="style-btn-name">Neon</span>
+                </button>
+                <button class="mobile-style-btn" data-set-style="retro">
+                    <span class="style-btn-icon">📻</span>
+                    <span class="style-btn-name">Retro</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="mobile-drawer-section">
+            <div class="mobile-section-label" data-i18n="appearance-label">Wygląd:</div>
+            <button id="mobileThemeToggle" class="mobile-theme-btn" aria-label="Przełącz tryb jasny/ciemny" data-i18n-aria="aria-theme">
+                <span class="mobile-theme-icon">☀️</span>
+                <span class="mobile-theme-text" data-i18n="theme-light-label">☀️ Jasny tryb</span>
+            </button>
+        </div>
+
+        <div class="mobile-drawer-footer">
+            <a href="#kontakt" class="mobile-order-btn js-email-link" data-i18n="hero-cta">Zamów teraz →</a>
+        </div>
+    </div>
 
     <header id="top">
         <!-- TŁA DLA DUŻYCH EKRANÓW (CLOUD) -->
@@ -330,9 +406,9 @@
 
                 <!-- CATEGORY FILTER TABS -->
                 <div class="category-filters scroll-anim">
-                    <button class="filter-btn active" data-filter="all" data-i18n="filter-all">Wszystkie</button>
-                    <button class="filter-btn" data-filter="polish" data-i18n="filter-polish">Polskie</button>
-                    <button class="filter-btn" data-filter="english" data-i18n="filter-english">Angielskie</button>
+                    <button class="filter-btn active" data-filter="all"><span data-i18n="filter-all">Wszystkie</span> <span class="filter-count" data-count-for="all">0</span></button>
+                    <button class="filter-btn" data-filter="polish"><span data-i18n="filter-polish">Polskie</span> <span class="filter-count" data-count-for="polish">0</span></button>
+                    <button class="filter-btn" data-filter="english"><span data-i18n="filter-english">Angielskie</span> <span class="filter-count" data-count-for="english">0</span></button>
                 </div>
 
                 <!-- SORT OPTIONS -->
@@ -465,27 +541,75 @@
     </footer>
 
     <!-- LIGHTBOX -->
-    <div class="lightbox" id="lightbox">
-        <span class="lightbox-close">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Zamknij" data-i18n-aria="aria-lightbox-close">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
                 stroke-linecap="round" stroke-linejoin="round">
                 <line x1="18" y1="6" x2="6" y2="18"></line>
                 <line x1="6" y1="6" x2="18" y2="18"></line>
             </svg>
-        </span>
-        <img src="" id="lightbox-img" alt="Powiększone zdjęcie" data-i18n-alt="alt-lightbox">
+        </button>
+        <button class="lightbox-nav-btn lightbox-prev" id="lightboxPrev" aria-label="Poprzednie zdjęcie" data-i18n-aria="aria-lightbox-prev">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+        </button>
+        <button class="lightbox-nav-btn lightbox-next" id="lightboxNext" aria-label="Następne zdjęcie" data-i18n-aria="aria-lightbox-next">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+        </button>
+        <div class="lightbox-figure">
+            <img src="" id="lightbox-img" alt="Powiększone zdjęcie" data-i18n-alt="alt-lightbox">
+            <div class="lightbox-caption-bar" id="lightboxCaptionBar">
+                <div class="lightbox-meta">
+                    <span class="lightbox-title" id="lightboxTitle">Wzór</span>
+                    <span class="lightbox-counter" id="lightboxCounter"></span>
+                </div>
+                <button class="lightbox-order-btn" id="lightboxOrderBtn" data-i18n="lightbox-order">Zamów ten wzór →</button>
+            </div>
+        </div>
     </div>
 
     <!-- MODAL POCZTY E-MAIL -->
-    <div class="mail-modal" id="mailModal">
+    <div class="mail-modal" id="mailModal" role="dialog" aria-modal="true" aria-label="Wybierz sposób kontaktu">
         <div class="mail-modal-content">
-            <h3 data-i18n="mail-title">Wybierz pocztę</h3>
-            <a href="#" target="_blank" rel="noopener noreferrer" class="mail-btn" id="btn-gmail">Gmail</a>
-            <a href="#" target="_blank" rel="noopener noreferrer" class="mail-btn" id="btn-outlook">Outlook</a>
-            <a href="#" target="_blank" rel="noopener noreferrer" class="mail-btn" id="btn-yahoo">Yahoo</a>
-            <a href="#" class="mail-btn" id="btn-apple">Apple Mail</a>
-            <a href="#" class="mail-btn" id="btn-android" data-i18n="mail-android">Aplikacja Poczty</a>
-            <button class="mail-close" id="mailClose" data-i18n="mail-cancel">Anuluj</button>
+            <div class="mail-modal-header">
+                <h3 data-i18n="mail-title">Napisz do mnie</h3>
+                <p class="mail-modal-subtitle" data-i18n="mail-subtitle">Skopiuj adres e-mail lub otwórz swoją ulubioną aplikację pocztową:</p>
+            </div>
+
+            <div class="mail-copy-card">
+                <span class="mail-copy-email" id="emailAddressDisplay">tymofii.pryimak@gmail.com</span>
+                <button class="mail-copy-btn" id="copyEmailBtn" aria-label="Kopiuj adres email">
+                    <span class="copy-btn-icon">📋</span>
+                    <span class="copy-btn-text" data-i18n="mail-copy">Kopiuj e-mail</span>
+                </button>
+            </div>
+            
+            <div class="mail-separator">
+                <span data-i18n="mail-or">albo wybierz program:</span>
+            </div>
+
+            <div class="mail-apps-grid">
+                <a href="#" target="_blank" rel="noopener noreferrer" class="mail-btn" id="btn-gmail">
+                    <span class="mail-icon">✉️</span> <span>Gmail</span>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="mail-btn" id="btn-outlook">
+                    <span class="mail-icon">📬</span> <span>Outlook</span>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="mail-btn" id="btn-yahoo">
+                    <span class="mail-icon">📩</span> <span>Yahoo</span>
+                </a>
+                <a href="#" class="mail-btn" id="btn-apple">
+                    <span class="mail-icon">🍎</span> <span>Apple Mail</span>
+                </a>
+                <a href="#" class="mail-btn mail-btn-default" id="btn-android">
+                    <span class="mail-icon">📱</span> <span data-i18n="mail-android">Aplikacja poczty</span>
+                </a>
+            </div>
+
+            <button class="mail-close" id="mailClose" data-i18n="mail-cancel">Zamknij</button>
         </div>
     </div>
 
