@@ -441,24 +441,49 @@ document.addEventListener("DOMContentLoaded", () => {
         .filter(Boolean);
     const topNavEl = document.querySelector('.top-nav');
     let navLinksEls = null;
+    let currentActiveId = '';
+    let cachedSectionTops = [];
+
+    const updateSectionTops = () => {
+        const navOffset = (topNavEl?.offsetHeight || 0) + 90;
+        cachedSectionTops = navSectionEls.map(section => {
+            let top = 0;
+            let el = section;
+            while (el) {
+                top += el.offsetTop;
+                el = el.offsetParent;
+            }
+            return {
+                id: section.id,
+                top: top - navOffset
+            };
+        });
+    };
+
+    window.addEventListener('resize', updateSectionTops, { passive: true });
+    window.addEventListener('orientationchange', updateSectionTops, { passive: true });
+    updateSectionTops();
 
     const updateActiveNavigation = () => {
-        const navOffset = (topNavEl?.offsetHeight || 0) + 90;
-        let activeId = navSectionEls[0]?.id || '';
+        const scrollPosition = window.scrollY;
+        let activeId = cachedSectionTops[0]?.id || '';
 
-        navSectionEls.forEach(section => {
-            if (section.getBoundingClientRect().top <= navOffset) {
-                activeId = section.id;
+        for (let i = 0; i < cachedSectionTops.length; i++) {
+            if (scrollPosition >= cachedSectionTops[i].top) {
+                activeId = cachedSectionTops[i].id;
             }
-        });
-
-        if (!navLinksEls) {
-            navLinksEls = document.querySelectorAll('.nav-links a, .mobile-nav-link');
         }
-        navLinksEls.forEach(link => {
-            const href = link.getAttribute('href') || '';
-            link.classList.toggle('active', href === `#${activeId}`);
-        });
+
+        if (activeId !== currentActiveId) {
+            currentActiveId = activeId;
+            if (!navLinksEls) {
+                navLinksEls = document.querySelectorAll('.nav-links a, .mobile-nav-link');
+            }
+            navLinksEls.forEach(link => {
+                const href = link.getAttribute('href') || '';
+                link.classList.toggle('active', href === `#${activeId}`);
+            });
+        }
     };
 
     // ANIMACJE SCROLLA I PARALAKSA MYSZKI
@@ -747,6 +772,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 renderGrid('prints-combined-grid', filteredPrints);
                 bindLightboxListeners();
+                if (typeof updateSectionTops === 'function') updateSectionTops();
             };
 
             // Filter button click handlers
