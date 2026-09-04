@@ -2132,6 +2132,20 @@ html {
             .portfolio-card img {
                 transition: none !important;
             }
+
+            html[data-style="minimalist"] header::before {
+                background-attachment: scroll !important;
+                animation: none !important;
+            }
+
+            html[data-style="minimalist"] header h1,
+            html[data-style="cloudy"] header h1 {
+                animation: none !important;
+            }
+
+            html[data-style="minimalist"] .about-image img {
+                animation: none !important;
+            }
         }
 
         /* Błyszczący efekt (Shine) najechania dla kart */
@@ -5443,6 +5457,25 @@ html[data-theme="light"] .mobile-nav-close {
 @media (max-width: 992px) {
     html {
         scroll-padding-top: 76px;
+    }
+
+    .top-nav,
+    .header-content {
+        will-change: auto !important;
+    }
+
+    html[data-style="minimalist"] header::before {
+        background-attachment: scroll !important;
+        animation: none !important;
+    }
+
+    html[data-style="minimalist"] header h1,
+    html[data-style="cloudy"] header h1 {
+        animation: none !important;
+    }
+
+    html[data-style="minimalist"] .about-image img {
+        animation: none !important;
     }
 
     .top-nav,
