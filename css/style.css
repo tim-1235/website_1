@@ -3791,6 +3791,7 @@ html {
         .scroll-anim.visible {
             opacity: 1;
             transform: translateY(0) scale(1);
+            will-change: auto;
         }
 
 
@@ -5588,6 +5589,8 @@ html[data-theme="light"] .mobile-nav-close {
         padding: 6px 7px;
         opacity: 1;
         transform: none;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
     }
 
     #prints-combined-grid .portfolio-card-name {

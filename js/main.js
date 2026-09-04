@@ -439,9 +439,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const navSectionEls = navSectionIds
         .map(id => document.getElementById(id))
         .filter(Boolean);
+    const topNavEl = document.querySelector('.top-nav');
+    let navLinksEls = null;
 
     const updateActiveNavigation = () => {
-        const navOffset = (document.querySelector('.top-nav')?.offsetHeight || 0) + 90;
+        const navOffset = (topNavEl?.offsetHeight || 0) + 90;
         let activeId = navSectionEls[0]?.id || '';
 
         navSectionEls.forEach(section => {
@@ -450,7 +452,10 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        document.querySelectorAll('.nav-links a, .mobile-nav-link').forEach(link => {
+        if (!navLinksEls) {
+            navLinksEls = document.querySelectorAll('.nav-links a, .mobile-nav-link');
+        }
+        navLinksEls.forEach(link => {
             const href = link.getAttribute('href') || '';
             link.classList.toggle('active', href === `#${activeId}`);
         });
@@ -496,10 +501,11 @@ document.addEventListener("DOMContentLoaded", () => {
     updateActiveNavigation();
 
     // INTERSECTION OBSERVER
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries, obs) => {
         entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
-                setTimeout(() => { entry.target.classList.add('visible'); }, index * 50);
+                setTimeout(() => { entry.target.classList.add('visible'); }, index * 30);
+                obs.unobserve(entry.target);
             }
         });
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
