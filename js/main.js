@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
         'nav-contact': 'Contact',
         'style-text': 'Theme',
         'style-label': 'Theme:',
-        'style-drawing': '✏️ Drawing',
+        'style-drawing': 'Drawing',
         'appearance-label': 'Appearance:',
         'theme-light-label': '☀️ Light mode',
         'hero-subtitle': 'Christian graphic designer – I design the print, you choose the garment',

@@ -2133,17 +2133,20 @@ html {
                 transition: none !important;
             }
 
-            html[data-style="minimalist"] header::before {
+            html header::before {
                 background-attachment: scroll !important;
                 animation: none !important;
             }
 
-            html[data-style="minimalist"] header h1,
-            html[data-style="cloudy"] header h1 {
+            html header h1,
+            html .about-image img,
+            html .cta-button,
+            html .hero-cta-btn {
                 animation: none !important;
             }
 
-            html[data-style="minimalist"] .about-image img {
+            .doodle,
+            .cloud-decor {
                 animation: none !important;
             }
         }
@@ -5464,17 +5467,20 @@ html[data-theme="light"] .mobile-nav-close {
         will-change: auto !important;
     }
 
-    html[data-style="minimalist"] header::before {
+    html header::before {
         background-attachment: scroll !important;
         animation: none !important;
     }
 
-    html[data-style="minimalist"] header h1,
-    html[data-style="cloudy"] header h1 {
+    html header h1,
+    html .about-image img,
+    html .cta-button,
+    html .hero-cta-btn {
         animation: none !important;
     }
 
-    html[data-style="minimalist"] .about-image img {
+    .doodle,
+    .cloud-decor {
         animation: none !important;
     }
 
