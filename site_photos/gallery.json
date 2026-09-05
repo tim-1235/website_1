@@ -81,116 +81,143 @@
         "text_content": "9",
         "alt_pl": "Chrześcijański nadruk Wzór 9 – projekt graficzny na koszulkę i bluzę",
         "alt_en": "Christian print design Print 9 – graphic design for apparel"
+      },
+      {
+        "id": "print-pl-10",
+        "src": "./site_photos/Prints/Polish/10.png",
+        "title_pl": "Wzór 10",
+        "title_en": "Print 10",
+        "text_content": "10",
+        "alt_pl": "Chrześcijański nadruk Wzór 10 – projekt graficzny na koszulkę i bluzę",
+        "alt_en": "Christian print design Print 10 – graphic design for apparel"
+      },
+      {
+        "id": "print-pl-11",
+        "src": "./site_photos/Prints/Polish/11.png",
+        "title_pl": "Wzór 11",
+        "title_en": "Print 11",
+        "text_content": "11",
+        "alt_pl": "Chrześcijański nadruk Wzór 11 – projekt graficzny na koszulkę i bluzę",
+        "alt_en": "Christian print design Print 11 – graphic design for apparel"
+      },
+      {
+        "id": "print-pl-12",
+        "src": "./site_photos/Prints/Polish/12.png",
+        "title_pl": "Wzór 12",
+        "title_en": "Print 12",
+        "text_content": "12",
+        "alt_pl": "Chrześcijański nadruk Wzór 12 – projekt graficzny na koszulkę i bluzę",
+        "alt_en": "Christian print design Print 12 – graphic design for apparel"
       }
     ],
     "english": [
       {
         "id": "print-en-1",
         "src": "./site_photos/Prints/English/10.png",
-        "title_pl": "Wzór 10",
-        "title_en": "Print 10",
-        "text_content": "10",
-        "alt_pl": "Chrześcijański nadruk Wzór 10 – projekt graficzny na odzież",
-        "alt_en": "Christian print design Print 10 – custom apparel graphic"
-      },
-      {
-        "id": "print-en-2",
-        "src": "./site_photos/Prints/English/11.png",
-        "title_pl": "Wzór 11",
-        "title_en": "Print 11",
-        "text_content": "11",
-        "alt_pl": "Chrześcijański nadruk Wzór 11 – projekt graficzny na odzież",
-        "alt_en": "Christian print design Print 11 – custom apparel graphic"
-      },
-      {
-        "id": "print-en-3",
-        "src": "./site_photos/Prints/English/12.png",
-        "title_pl": "Wzór 12",
-        "title_en": "Print 12",
-        "text_content": "12",
-        "alt_pl": "Chrześcijański nadruk Wzór 12 – projekt graficzny na odzież",
-        "alt_en": "Christian print design Print 12 – custom apparel graphic"
-      },
-      {
-        "id": "print-en-4",
-        "src": "./site_photos/Prints/English/13.png",
         "title_pl": "Wzór 13",
         "title_en": "Print 13",
-        "text_content": "13",
+        "text_content": "10",
         "alt_pl": "Chrześcijański nadruk Wzór 13 – projekt graficzny na odzież",
         "alt_en": "Christian print design Print 13 – custom apparel graphic"
       },
       {
-        "id": "print-en-5",
-        "src": "./site_photos/Prints/English/14.png",
+        "id": "print-en-2",
+        "src": "./site_photos/Prints/English/11.png",
         "title_pl": "Wzór 14",
         "title_en": "Print 14",
-        "text_content": "14",
+        "text_content": "11",
         "alt_pl": "Chrześcijański nadruk Wzór 14 – projekt graficzny na odzież",
         "alt_en": "Christian print design Print 14 – custom apparel graphic"
       },
       {
-        "id": "print-en-6",
-        "src": "./site_photos/Prints/English/15.png",
+        "id": "print-en-3",
+        "src": "./site_photos/Prints/English/12.png",
         "title_pl": "Wzór 15",
         "title_en": "Print 15",
-        "text_content": "15",
+        "text_content": "12",
         "alt_pl": "Chrześcijański nadruk Wzór 15 – projekt graficzny na odzież",
         "alt_en": "Christian print design Print 15 – custom apparel graphic"
       },
       {
-        "id": "print-en-7",
-        "src": "./site_photos/Prints/English/16.png",
+        "id": "print-en-4",
+        "src": "./site_photos/Prints/English/13.png",
         "title_pl": "Wzór 16",
         "title_en": "Print 16",
-        "text_content": "16",
+        "text_content": "13",
         "alt_pl": "Chrześcijański nadruk Wzór 16 – projekt graficzny na odzież",
         "alt_en": "Christian print design Print 16 – custom apparel graphic"
       },
       {
-        "id": "print-en-8",
-        "src": "./site_photos/Prints/English/17.png",
+        "id": "print-en-5",
+        "src": "./site_photos/Prints/English/14.png",
         "title_pl": "Wzór 17",
         "title_en": "Print 17",
-        "text_content": "17",
+        "text_content": "14",
         "alt_pl": "Chrześcijański nadruk Wzór 17 – projekt graficzny na odzież",
         "alt_en": "Christian print design Print 17 – custom apparel graphic"
       },
       {
-        "id": "print-en-9",
-        "src": "./site_photos/Prints/English/18.png",
+        "id": "print-en-6",
+        "src": "./site_photos/Prints/English/15.png",
         "title_pl": "Wzór 18",
         "title_en": "Print 18",
-        "text_content": "18",
+        "text_content": "15",
         "alt_pl": "Chrześcijański nadruk Wzór 18 – projekt graficzny na odzież",
         "alt_en": "Christian print design Print 18 – custom apparel graphic"
       },
       {
-        "id": "print-en-10",
-        "src": "./site_photos/Prints/English/19.png",
+        "id": "print-en-7",
+        "src": "./site_photos/Prints/English/16.png",
         "title_pl": "Wzór 19",
         "title_en": "Print 19",
-        "text_content": "19",
+        "text_content": "16",
         "alt_pl": "Chrześcijański nadruk Wzór 19 – projekt graficzny na odzież",
         "alt_en": "Christian print design Print 19 – custom apparel graphic"
       },
       {
-        "id": "print-en-11",
-        "src": "./site_photos/Prints/English/20.png",
+        "id": "print-en-8",
+        "src": "./site_photos/Prints/English/17.png",
         "title_pl": "Wzór 20",
         "title_en": "Print 20",
-        "text_content": "20",
+        "text_content": "17",
         "alt_pl": "Chrześcijański nadruk Wzór 20 – projekt graficzny na odzież",
         "alt_en": "Christian print design Print 20 – custom apparel graphic"
       },
       {
-        "id": "print-en-12",
-        "src": "./site_photos/Prints/English/21.png",
+        "id": "print-en-9",
+        "src": "./site_photos/Prints/English/18.png",
         "title_pl": "Wzór 21",
         "title_en": "Print 21",
-        "text_content": "21",
+        "text_content": "18",
         "alt_pl": "Chrześcijański nadruk Wzór 21 – projekt graficzny na odzież",
         "alt_en": "Christian print design Print 21 – custom apparel graphic"
+      },
+      {
+        "id": "print-en-10",
+        "src": "./site_photos/Prints/English/19.png",
+        "title_pl": "Wzór 22",
+        "title_en": "Print 22",
+        "text_content": "19",
+        "alt_pl": "Chrześcijański nadruk Wzór 22 – projekt graficzny na odzież",
+        "alt_en": "Christian print design Print 22 – custom apparel graphic"
+      },
+      {
+        "id": "print-en-11",
+        "src": "./site_photos/Prints/English/20.png",
+        "title_pl": "Wzór 23",
+        "title_en": "Print 23",
+        "text_content": "20",
+        "alt_pl": "Chrześcijański nadruk Wzór 23 – projekt graficzny na odzież",
+        "alt_en": "Christian print design Print 23 – custom apparel graphic"
+      },
+      {
+        "id": "print-en-12",
+        "src": "./site_photos/Prints/English/21.png",
+        "title_pl": "Wzór 24",
+        "title_en": "Print 24",
+        "text_content": "21",
+        "alt_pl": "Chrześcijański nadruk Wzór 24 – projekt graficzny na odzież",
+        "alt_en": "Christian print design Print 24 – custom apparel graphic"
       }
     ]
   },
